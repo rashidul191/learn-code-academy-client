@@ -1,0 +1,27 @@
+/* #footer-section{
+   
+} */
+
+.footer-logo-size{
+    height: 40px;
+}
+
+.pay-with{
+    height: 100%;
+    width: 100%;   
+}
+li Link{
+    color: tomLinkto;
+}
+
+li Link:hover{
+    color: white;
+}
+.icon-size{
+    height: 600px;
+    width: 600px;
+}
+
+span Link{
+    color: white;
+}

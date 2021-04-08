@@ -12,6 +12,9 @@ import Home from './Components/Home/Home';
 import SignIn from './Components/SignIn/SignIn';
 import NoMatch from './Components/NoMatch/NoMatch';
 import ContactMe from './Components/ContactMe/ContactMe';
+import Courses from './Components/HomeCourse/Courses/Courses';
+import OurBlog from './Components/OurBlog/OurBlog';
+import AboutUs from './Components/AboutUs/AboutUs';
 
 function App() {
   return (
@@ -24,15 +27,27 @@ function App() {
           </Route>
 
           <Route path="/home">
-            <Home/>
+            <Home />
           </Route>
 
           <Route path="/contact-me">
             <ContactMe></ContactMe>
           </Route>
 
+          <Route path="/courses">
+            <Courses></Courses>
+          </Route>
+
+          <Route path="/our-blog">
+            <OurBlog></OurBlog>
+          </Route>
+
           <Route path="/sign-in">
             <SignIn></SignIn>
+          </Route>
+
+          <Route path="/about-us">
+            <AboutUs></AboutUs>
           </Route>
 
           <Route path="*">

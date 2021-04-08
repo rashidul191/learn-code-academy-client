@@ -2,9 +2,12 @@
     height: 50px;
     width: auto;
 }
-li{
- font-size: 18px;
+.navbar-style{
+    border-bottom: 5px solid green;
 }
+/* li{
+ font-size: 18px;
+} */
 .link-style{
     margin-top: 7px;
 }

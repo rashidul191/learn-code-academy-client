@@ -1,0 +1,18 @@
+.popular-course-head{
+    text-align: center;
+    color: green;
+}
+
+.card{
+    border: 1px solid black;
+    margin: 5px;
+}
+
+span{
+    color: green;
+    font: bold;
+}
+
+/* .card :hover{
+    box-shadow: 2px 2px 2px 10px gray;
+} */
