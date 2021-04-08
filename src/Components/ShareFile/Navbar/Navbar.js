@@ -5,8 +5,8 @@ import logo from '../../../Images/logo/Logo.png';
 
 const Navbar = () => {
     return (
-        <section id="nav-bar ">
-            <div className="navbar-style sticky-top">
+        <section id="nav-bar sticky-top">
+            <div className="navbar-style ">
                 <nav class="navbar navbar-expand-lg navbar-light  bg-light">
                     <div className="container">
                         <Link class="navbar-brand" to="/">

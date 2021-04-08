@@ -1,0 +1,13 @@
+#Teacher{
+
+    background: rgb(213, 233, 235);
+}
+#Teacher img{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+}
+
+#Teacher h6{
+    color: rgb(4, 48, 241);
+}

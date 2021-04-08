@@ -38,7 +38,11 @@ const HomeCourse = () => {
                             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         </div>
                     </div>
+
+                    
                 </div>
+
+
                 <div className="text-center py-4">
                     <Link to="/courses"><button className="btn btn-success">Browse All Courese
                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-bar-right" viewBox="0 0 16 16">
