@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Footer from '../ShareFile/Footer/Footer';
-import Navbar from '../ShareFile/Navbar/Navbar';
 import './OurBlog.css';
 
 const OurBlog = () => {

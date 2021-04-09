@@ -1,11 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
 import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  // Link
 } from "react-router-dom";
 
 import Home from './Components/Home/Home';
@@ -15,6 +14,9 @@ import ContactMe from './Components/ContactMe/ContactMe';
 import Courses from './Components/HomeCourse/Courses/Courses';
 import AboutUs from './Components/AboutUs/AboutUs';
 import OurBlogDetails from './Components/OurBlog/OurBlogDetails/OurBlogDetails';
+import PrivacyPolicy from './Components/PrivacyPolicy/PrivacyPolicy';
+import TcConditeion from './Components/TcConditeion/TcConditeion';
+import CoursesDetails from './Components/HomeCourse/CoursesDetails/CoursesDetails';
 
 function App() {
   return (
@@ -38,6 +40,10 @@ function App() {
             <Courses></Courses>
           </Route>
 
+          <Route path="/courses-details">
+            <CoursesDetails></CoursesDetails>
+          </Route>
+
           <Route path="/our-blog">
             <OurBlogDetails></OurBlogDetails>
           </Route>
@@ -48,6 +54,15 @@ function App() {
 
           <Route path="/about-us">
             <AboutUs></AboutUs>
+          </Route>
+
+          <Route path="/privacy-policy">
+            <PrivacyPolicy></PrivacyPolicy>
+          </Route>
+
+          
+          <Route path="/terms-of-service">
+            <TcConditeion></TcConditeion>
           </Route>
 
           <Route path="*">

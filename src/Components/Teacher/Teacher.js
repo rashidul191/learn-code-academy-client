@@ -1,9 +1,6 @@
 import React from 'react';
 import './Teacher.css';
 import teacherImg from '../../Images/Rashidul.jpg';
-import { Link } from 'react-router-dom';
-
-
 
 const Teacher = () => {
     return (

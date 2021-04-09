@@ -56,7 +56,7 @@ const Footer = () => {
                                     <Link class="nav-link  mr-2" to="/instructor">Instructor</Link>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <Link class="nav-link mr-2" to="/terms-of-service">Terms and Conditions</Link>
+                                    <Link class="nav-link mr-2" to="/terms-of-service">Terms Of Service</Link>
                                 </li>
                                 <li class="nav-item">
                                     <Link class="nav-link  mr-2 " to="/privacy-policy">Privacy Policy</Link>
