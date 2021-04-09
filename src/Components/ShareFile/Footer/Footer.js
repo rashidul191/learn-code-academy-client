@@ -11,7 +11,7 @@ const Footer = () => {
                 <div className="container  py-5">
                     <div className="row">
                         <div className="col-lg-4 col-md-6 col-sm-6 pb-3">
-                            <img className="footer-logo-size img-fluid" src={logo} alt="" />
+                        <Link to="/">    <img className="footer-logo-size img-fluid" src={logo} alt="" /></Link>
                             <div className="pt-4">
                                 <p>📧 Official: lca@gmail.com <br />
                                 ☎️ Helpline: 0123456789 <br /> (Available: 09:00am to 11:00pm)</p>

@@ -13,8 +13,8 @@ import SignIn from './Components/SignIn/SignIn';
 import NoMatch from './Components/NoMatch/NoMatch';
 import ContactMe from './Components/ContactMe/ContactMe';
 import Courses from './Components/HomeCourse/Courses/Courses';
-import OurBlog from './Components/OurBlog/OurBlog';
 import AboutUs from './Components/AboutUs/AboutUs';
+import OurBlogDetails from './Components/OurBlog/OurBlogDetails/OurBlogDetails';
 
 function App() {
   return (
@@ -39,7 +39,7 @@ function App() {
           </Route>
 
           <Route path="/our-blog">
-            <OurBlog></OurBlog>
+            <OurBlogDetails></OurBlogDetails>
           </Route>
 
           <Route path="/sign-in">

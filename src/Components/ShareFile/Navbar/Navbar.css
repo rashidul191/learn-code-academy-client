@@ -3,7 +3,8 @@
     width: auto;
 }
 .navbar-style{
-    border-bottom: 5px solid green;
+    /* border-bottom: 5px solid green; */
+    box-shadow: 2px 2px 8px green;
 }
 /* li{
  font-size: 18px;

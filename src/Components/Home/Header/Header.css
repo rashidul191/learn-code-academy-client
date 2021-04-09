@@ -1,0 +1,6 @@
+#header{
+    height: 520px;
+    width: auto;
+    background: rgb(245, 182, 66);
+    clip-path: polygon(0 0, 100% 0, 100% 78%, 0% 100%);
+}

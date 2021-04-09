@@ -1,6 +1,7 @@
 import React from 'react';
 import EnrollStudents from '../EnrollStudents/EnrollStudents';
 import HomeCourse from '../HomeCourse/HomeCourse';
+import OurBlog from '../OurBlog/OurBlog';
 import Footer from '../ShareFile/Footer/Footer';
 import Navbar from '../ShareFile/Navbar/Navbar';
 import StudentReview from '../StudentReview/StudentReview';
@@ -17,6 +18,7 @@ const Home = () => {
             <Teacher></Teacher>
             <EnrollStudents></EnrollStudents>
             <StudentReview></StudentReview>
+            <OurBlog></OurBlog>
             <Footer></Footer>
         </section>
     );

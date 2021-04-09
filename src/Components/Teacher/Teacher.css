@@ -1,6 +1,7 @@
 #Teacher{
 
     background: rgb(213, 233, 235);
+    clip-path: polygon(20% 0, 80% 0, 100% 20%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0% 20%);
 }
 #Teacher img{
     height: 120px;
