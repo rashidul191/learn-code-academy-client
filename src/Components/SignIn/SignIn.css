@@ -1,0 +1,20 @@
+.sign-in-img{
+    background-image: url('../../Images/login-bg.jpg');
+    background-repeat: no-repeat;
+}
+
+.sign-in-bg{
+    background: rgba(0, 0, 0, 0.5);
+}
+.sign-body-bg{
+    padding: 30px;
+    background: rgb(83, 245, 245);
+}
+
+p::before{
+    content: "----------";
+}
+
+p::after{
+    content: "----------";
+}
