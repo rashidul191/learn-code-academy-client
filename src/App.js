@@ -22,6 +22,7 @@ import UserDashboard from './Components/UserDashboard/UserDashboard';
 import MyCourse from './Components/UserDashboard/MyCourse/MyCourse';
 import PurchaseHistory from './Components/UserDashboard/PurchaseHistory/PurchaseHistory';
 import UserNotification from './Components/UserDashboard/UserNotification/UserNotification';
+import Instructor from './Components/Instructor/Instructor';
 
 function App() {
   return (
@@ -61,19 +62,6 @@ function App() {
             <CheckOut></CheckOut>
           </Route>
 
-          <Route path="/about-us">
-            <AboutUs></AboutUs>
-          </Route>
-
-          <Route path="/privacy-policy">
-            <PrivacyPolicy></PrivacyPolicy>
-          </Route>
-
-
-          <Route path="/terms-of-service">
-            <TcConditeion></TcConditeion>
-          </Route>
-
           <Route path="/purchase-history">
             <PurchaseHistory></PurchaseHistory>
           </Route>
@@ -87,8 +75,25 @@ function App() {
           </Route>
 
           <Route path="/user-notifications">
-           <UserNotification></UserNotification>
-          </Route>         
+            <UserNotification></UserNotification>
+          </Route>
+
+          <Route path="/about-us">
+            <AboutUs></AboutUs>
+          </Route>
+
+          <Route path="/instructor">
+            <Instructor></Instructor>
+          </Route>
+
+          <Route path="/privacy-policy">
+            <PrivacyPolicy></PrivacyPolicy>
+          </Route>
+
+
+          <Route path="/terms-of-service">
+            <TcConditeion></TcConditeion>
+          </Route>
 
 
           <Route path="*">
