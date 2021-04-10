@@ -9,10 +9,10 @@ const OurBlogDetails = () => {
         <section>
             <Navbar></Navbar>
             <div className="container mt-3">
-                <p className="lead">Home / Our Blocg</p>
+                <p className="lead">Home / Our Blogs</p>
             </div>
             <div>
-                <h3 className="bg-info py-5 mt-3 text-center text-light display-4">Our Latest Blog</h3>
+                <h3 className="bg-info py-5 mt-3 text-center text-light display-4">Our Latest Blogs</h3>
             </div>
 
             <div className="container">

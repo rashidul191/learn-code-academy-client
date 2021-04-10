@@ -6,8 +6,8 @@
 }
 
 #student-Review img{    
-    height: 80px;
-    width: 80px;
+    height: 70px;
+    width: 70px;
     border-radius: 50%;
     margin: auto;    
     
@@ -17,18 +17,3 @@
         margin-right: 100px;
         margin-left: 100px;
 }
-
-/* .carousel-slid-body{
-    text-align: center;
-    height: 100%;
-    width: 100%;
-    background: rgb(255, 0, 0);
-} */
-
-/* .carousel-slid-body-2{
-    margin-left: 20%;
-    margin-top: 15%;
-    height: 80%;
-    width: 80%;
-    background: rgb(126, 250, 10);
-} */

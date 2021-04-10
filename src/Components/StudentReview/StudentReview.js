@@ -6,7 +6,7 @@ const StudentReview = () => {
     return (
         <section id="student-Review">
             <div className="container text-center py-5">
-                <h3 className="">***Students Review***</h3>
+                <h4 className="">***Students Review***</h4>
                 <div id="carouselExampleFade" class="carousel slide " data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -19,12 +19,12 @@ const StudentReview = () => {
                                 <div className="col-lg-6 col-md-12">
 
                                     <img src={student} class="d-block " alt="..." />
-                                    <h3>Rashidul Islam</h3>
+                                    <h4>Rashidul Islam</h4>
                                     <p className="lead ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta amet expedita nemo sint tenetur praesentium saepe voluptatibus nihil repellendus dolor iusto eligendi, aliquid molestiae, accusantium vero? Fugiat error sapiente omnis!</p>
                                 </div>
                                 <div className="col-lg-6 col-md-12">
                                     <img src={student} class="d-block " alt="..." />
-                                    <h3>Rashidul Islam</h3>
+                                    <h4>Rashidul Islam</h4>
                                     <p className="lead ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta amet expedita nemo sint tenetur praesentium saepe voluptatibus nihil repellendus dolor iusto eligendi, aliquid molestiae, accusantium vero? Fugiat error sapiente omnis!</p>
                                 </div>
                             </div>
@@ -34,12 +34,12 @@ const StudentReview = () => {
                             <div className="row">
                                 <div className="col-lg-6 col-md-12">
                                     <img src={student} class="d-block " alt="..." />
-                                    <h3>Rashidul Islam</h3>
+                                    <h4>Rashidul Islam</h4>
                                     <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta amet expedita nemo sint tenetur praesentium saepe voluptatibus nihil repellendus dolor iusto eligendi, aliquid molestiae, accusantium vero? Fugiat error sapiente omnis!</p>
                                 </div>
                                 <div className="col-lg-6 col-md-12">
                                     <img src={student} class="d-block " alt="..." />
-                                    <h3>Rashidul Islam</h3>
+                                    <h4>Rashidul Islam</h4>
                                     <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta amet expedita nemo sint tenetur praesentium saepe voluptatibus nihil repellendus dolor iusto eligendi, aliquid molestiae, accusantium vero? Fugiat error sapiente omnis!</p>
                                 </div>
                             </div>
@@ -49,12 +49,12 @@ const StudentReview = () => {
                             <div className="row">
                                 <div className="col-lg-6 col-md-12">
                                     <img src={student} class="d-block " alt="..." />
-                                    <h3>Rashidul Islam</h3>
+                                    <h4>Rashidul Islam</h4>
                                     <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta amet expedita nemo sint tenetur praesentium saepe voluptatibus nihil repellendus dolor iusto eligendi, aliquid molestiae, accusantium vero? Fugiat error sapiente omnis!</p>
                                 </div>
                                 <div className="col-lg-6 col-md-12">
                                     <img src={student} class="d-block " alt="..." />
-                                    <h3>Rashidul Islam</h3>
+                                    <h4>Rashidul Islam</h4>
                                     <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta amet expedita nemo sint tenetur praesentium saepe voluptatibus nihil repellendus dolor iusto eligendi, aliquid molestiae, accusantium vero? Fugiat error sapiente omnis!</p>
                                 </div>
                             </div>

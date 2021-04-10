@@ -18,6 +18,7 @@ import PrivacyPolicy from './Components/PrivacyPolicy/PrivacyPolicy';
 import TcConditeion from './Components/TcConditeion/TcConditeion';
 import CoursesDetails from './Components/HomeCourse/CoursesDetails/CoursesDetails';
 import CheckOut from './Components/CheckOut/CheckOut';
+import UserDashboard from './Components/UserDashboard/UserDashboard';
 
 function App() {
   return (
@@ -45,7 +46,7 @@ function App() {
             <CoursesDetails></CoursesDetails>
           </Route>
 
-          <Route path="/our-blog">
+          <Route path="/our-blogs">
             <OurBlogDetails></OurBlogDetails>
           </Route>
 
@@ -68,6 +69,10 @@ function App() {
           
           <Route path="/terms-of-service">
             <TcConditeion></TcConditeion>
+          </Route>
+
+          <Route path="/user-dashboard">
+            <UserDashboard></UserDashboard>
           </Route>
 
           <Route path="*">
