@@ -33,7 +33,7 @@ function App() {
             <Home />
           </Route>
 
-          <Route path="/contact-me">
+          <Route path="/contact-us">
             <ContactMe></ContactMe>
           </Route>
 

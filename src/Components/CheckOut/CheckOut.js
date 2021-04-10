@@ -57,7 +57,6 @@ const CheckOut = () => {
                                             class="mb-0" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
                                             Collapsible Group Item />
                                         <label className="ml-3  mb-0" htmlFor="bKash">bKash</label>
-
                                     </div>
 
                                     <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">

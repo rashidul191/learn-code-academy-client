@@ -10,7 +10,7 @@ const Courses = () => {
     return (
         <section id="Courses">
             <Navbar></Navbar>
-            <h1 className="text-center text-light bg-info py-5">Courses</h1>
+            <h3 className="text-center text-light bg-info display-4 mt-3 py-5">Courses</h3>
             <div className="container  py-5">
                 <div className="row">
                     <div className="col-lg-4 col-md-6  my-2">
