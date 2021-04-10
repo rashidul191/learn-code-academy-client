@@ -5,7 +5,7 @@ import './SignIn.css';
 
 const SignIn = () => {
     return (
-        <section id="sign-in">
+        <section id="sign-In">
             <Navbar></Navbar>
             <div className="sign-in-img">
                 <div className="sign-in-bg">
@@ -16,17 +16,17 @@ const SignIn = () => {
                                 <div className="col-lg-6 col-md-10 sign-body-bg">
                                     <form action="">
                                         <div className="form-group">
-                                            <label htmlFor="name">Name:</label>
+                                            <label className="lead" htmlFor="name">Name:</label>
                                             <input type="text" className="form-control form-control-lg " name="name" id="name" placeholder="Your Name"  required/>
                                         </div>
 
                                         <div className="form-group">
-                                            <label htmlFor="email">Email:</label>
+                                            <label className="lead" htmlFor="email">Email:</label>
                                             <input type="email" className="form-control form-control-lg " name="email" id="email" placeholder="name@example.com" required/>
                                         </div>
 
                                         <div className="form-group">
-                                            <label htmlFor="password">Password:</label>
+                                            <label className="lead" htmlFor="password">Password:</label>
                                             <input type="password" className="form-control form-control-lg " name="password" id="password" placeholder="Your password" required/>
                                         </div>
                                         <div className="row mx-1">
@@ -44,7 +44,8 @@ const SignIn = () => {
                                         </div>
                                     </form>
                                     <div>
-                                        <p className="lead text-center text-primary"> Or </p>
+                                        <p className="lead or-text-style text-center text-primary" htmlFor="">Or</p>
+                                        
                                     </div>
                                     <div>
                                         <button>Google With Sign In</button>

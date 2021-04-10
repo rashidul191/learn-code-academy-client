@@ -4,17 +4,17 @@
 }
 
 .sign-in-bg{
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
 }
 .sign-body-bg{
     padding: 30px;
-    background: rgb(83, 245, 245);
+    background: rgb(205, 240, 245);
 }
 
-p::before{
+#sign-In .or-text-style::before{
     content: "----------";
 }
 
-p::after{
+#sign-In .or-text-style::after{
     content: "----------";
 }
