@@ -17,6 +17,7 @@ import OurBlogDetails from './Components/OurBlog/OurBlogDetails/OurBlogDetails';
 import PrivacyPolicy from './Components/PrivacyPolicy/PrivacyPolicy';
 import TcConditeion from './Components/TcConditeion/TcConditeion';
 import CoursesDetails from './Components/HomeCourse/CoursesDetails/CoursesDetails';
+import CheckOut from './Components/CheckOut/CheckOut';
 
 function App() {
   return (
@@ -50,6 +51,10 @@ function App() {
 
           <Route path="/sign-in">
             <SignIn></SignIn>
+          </Route>
+
+          <Route path="/check-out">
+            <CheckOut></CheckOut>
           </Route>
 
           <Route path="/about-us">

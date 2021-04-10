@@ -3,6 +3,7 @@ import Footer from '../../ShareFile/Footer/Footer';
 import Navbar from '../../ShareFile/Navbar/Navbar';
 import './CoursesDetails.css';
 import instractor from '../../../Images/Rashidul.jpg';
+import { Link } from 'react-router-dom';
 
 const CoursesDetails = () => {
     return (
@@ -67,7 +68,7 @@ const CoursesDetails = () => {
                             <h1 className="text-center">$123.99</h1>
                         </div>
                         <div>
-                            <button className=" btn btn-primary btn-block">Enroll Course</button>
+                            <Link to="/check-out"> <button className=" btn btn-primary btn-block">Enroll Course</button></Link>
                         </div>
                         <div className="pt-3">
                             <h6>Category: </h6>
