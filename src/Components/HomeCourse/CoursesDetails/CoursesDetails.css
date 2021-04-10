@@ -11,14 +11,19 @@
 }
 
 .instractor{
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     padding: 20px;
     border: 1px solid springgreen;
-    background: rgb(142, 142, 143);
+    background: rgb(237, 237, 241);
 }
 
 .instractor-Img{
     height: 80px;
     width: 80px;
     border-radius: 50%;
+}
+
+.video-iframe{
+  border-bottom: 2px solid gray;
+  border-right: 2px solid gray;
 }

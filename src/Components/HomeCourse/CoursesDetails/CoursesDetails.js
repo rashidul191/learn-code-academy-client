@@ -11,13 +11,16 @@ const CoursesDetails = () => {
             <Navbar></Navbar>
             <div className="container">
                 <p className="lead pt-3">Home / Course / CoursesDetails</p>
+                <hr />
             </div>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-8 col-md-7 my-4">
                         <div className="row py-4 video-product-detaisl-body">
                             <div className="col-lg-6 col-md-12 ">
-                                <iframe width="320" height="180" src="https://www.youtube.com/embed/i8rllkq2BW4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div className="video-iframe">
+                                    <iframe width="320" height="180" src="https://www.youtube.com/embed/i8rllkq2BW4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
                             </div>
                             <div className="col-lg-6 col-md-12 " >
                                 <h5 class="">Compleat Web Programming Course</h5>
@@ -111,7 +114,7 @@ const CoursesDetails = () => {
                             </div>
                             <div className="ml-4">
                                 <h4>Name: Md Rashidul Islam</h4>
-                                <h6 className="text-warning">Web Developer </h6>
+                                <h6 className="text-success">Web Developer </h6>
                                 <div className="row ml-4">
                                     {/* socail icon here */}
                                     <p>F Y T I</p>

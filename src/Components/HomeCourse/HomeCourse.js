@@ -22,10 +22,10 @@ const HomeCourse = () => {
                                 <br /> Enrolled 191
                            <br /> Students Retting 4.7 ⭐⭐⭐⭐⭐</p>
                             <hr />
-                            <div className="row">
+                            <div className="row mx-3">
                                 <h4>$123.99</h4>
-                                <Link to="/courses-details">
-                                    <button className="btn btn-primary">Enroll Now</button>
+                                <Link className="ml-auto" to="/courses-details">
+                                    <button className="btn btn-primary ml-auto">Enroll Now</button>
                                 </Link>
                             </div>
                         </div>
@@ -35,7 +35,7 @@ const HomeCourse = () => {
                     <div class="card ">
                         <img src="..." class="card-img-top" alt="..." />
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h5 class="card-title ">Card title</h5>
                             <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
                             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         </div>

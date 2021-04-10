@@ -45,7 +45,7 @@ const CheckOut = () => {
                             <hr />
                         </div>
                         <div>
-                            <h4>Select Payment Method</h4>
+                            <h4 className="text-center py-3">Select Payment Method</h4>
                             <hr />
                         </div>
                         <div>

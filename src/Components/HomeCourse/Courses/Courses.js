@@ -10,6 +10,9 @@ const Courses = () => {
     return (
         <section id="Courses">
             <Navbar></Navbar>
+            <div className="container mt-3">
+                <p className="lead">Home / Course</p>
+            </div>
             <h3 className="text-center text-light bg-info display-4 mt-3 py-5">Courses</h3>
             <div className="container  py-5">
                 <div className="row">
@@ -23,9 +26,9 @@ const Courses = () => {
                                     <br /> Enrolled 191
                                    <br /> Students Retting 4.7 ⭐⭐⭐⭐⭐</p>
                                 <hr />
-                                <div className="row">
+                                <div className="row mx-3">
                                     <h4>$123.99</h4>
-                                    <Link to="/courses-details">
+                                    <Link  to="/courses-details" className="ml-auto">
                                         <button className="btn btn-primary" >Enroll Course</button>
                                     </Link>
                                 </div>
@@ -42,9 +45,9 @@ const Courses = () => {
                                     <br /> Enrolled 191
                                    <br /> Students Retting 4.7 ⭐⭐⭐⭐⭐</p>
                                 <hr />
-                                <div className="row">
+                                <div className="row mx-3">
                                     <h4>$123.99</h4>
-                                    <Link to="/courses-details">
+                                    <Link to="/courses-details" className="ml-auto">
                                         <button className="btn btn-primary">Enroll Course</button>
                                     </Link>
                                 </div>
@@ -61,9 +64,9 @@ const Courses = () => {
                                     <br /> Enrolled 191
                                    <br /> Students Retting 4.7 ⭐⭐⭐⭐⭐</p>
                                 <hr />
-                                <div className="row">
+                                <div className="row mx-3">
                                     <h4>$123.99</h4>
-                                    <Link to="/courses-details">
+                                    <Link to="/courses-details" className="ml-auto">
                                         <button className="btn btn-primary">Enroll Course</button></Link>
 
                                 </div>

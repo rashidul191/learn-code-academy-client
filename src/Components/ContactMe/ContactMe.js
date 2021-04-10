@@ -7,7 +7,10 @@ const ContactMe = () => {
     return (
         <section id="Contact-Me">
             <Navbar></Navbar>
-            <h3 className="bg-info display-4 mt-4 py-5 text-center text-light">Contact Us</h3>
+            <div className="container mt-3">
+                <p className="lead">Home / Contact us</p>
+            </div>
+            <h3 className="bg-info display-4 mt-3 py-5 text-center text-light">Contact Us</h3>
             <div className="container">
                 <div className="row text-center py-5">
                     <div className="col-md-4">
@@ -33,16 +36,13 @@ const ContactMe = () => {
                                     <div class="form-group">                                        
                                         <input type="name" class="form-control form-control-lg" id="name" placeholder="Your Name" required/>
                                     </div>
-
                                     <div class="form-group">                                     
                                         <input type="email" class="form-control form-control-lg" id="" placeholder="name@example.com" required />
                                     </div>
                                     <div class="form-group">                                     
                                         <input type="name" class="form-control form-control-lg" id="" placeholder="Phone Number" />
                                     </div>
-
-                                    <div class="form-group">
-                                        
+                                    <div class="form-group">                                        
                                         <textarea class="form-control form-control-lg" id="" rows="3">Message</textarea>
                                     </div>
                                     <div class="form-group ">                                        
@@ -53,7 +53,6 @@ const ContactMe = () => {
                         </div>
                         <div className="col-lg-2 col-md-12"></div>
                     </div>
-
                 </div>
             </div>
             <Footer></Footer>
