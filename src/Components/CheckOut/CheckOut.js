@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Footer from '../ShareFile/Footer/Footer';
 import Navbar from '../ShareFile/Navbar/Navbar';
 import './CheckOut.css';
+import thumbnail from '../../Images/thumbale.jpg';
 
 const CheckOut = () => {
     return (
@@ -13,7 +15,7 @@ const CheckOut = () => {
                     <table class="table  ">
                         <thead>
                             <tr>
-                                <th scope="col">No.</th>
+                                <th scope="col">S/L</th>
                                 <th scope="col">Images</th>
                                 <th scope="col">Product Details</th>
                                 <th scope="col">Prices</th>
@@ -23,13 +25,11 @@ const CheckOut = () => {
                         <tbody>
                             <tr>
                                 <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>@mdo</td>
+                                <td><img className="img-fluid purchase-img-size" src={thumbnail} alt=""/></td>
+                                <td>Compleate web programming course</td>
+                                <td>$129.99</td>
+                                <td>*</td>
                             </tr>
-                           
-
                         </tbody>
                     </table>
                 </div>
@@ -71,7 +71,6 @@ const CheckOut = () => {
                                             </div>
                                             <div class="input-group">
                                                 <input type="text" class="form-control" placeholder="bKash Transaction ID" aria-label="Dollar amount " />
-
                                             </div>
                                         </div>
                                     </div>
@@ -101,12 +100,12 @@ const CheckOut = () => {
                                 <div class="">
                                     <div class="card-header" id="headingThree">
                                         <input type="radio" name="" id="nagad"
-                                       data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"/>
-                                       <label className="ml-3 mb-0" htmlFor="nagad">Nagad</label>
+                                            data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" />
+                                        <label className="ml-3 mb-0" htmlFor="nagad">Nagad</label>
                                     </div>
                                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                                         <div class="card-body">
-                                        <div>
+                                            <div>
                                                 <p className="mb-0">নিচের নাগাদ নাম্বারে সেন্ড মানি করুন অথবা আপনার নিকটস্থ বিকাশ এজেন্ট দোকান থেকে ক্যাশ ইন করুন। তারপর যে বিকাশ নাম্বার থেকে টাকা সেন্ড করেছেন সেই বিকাশ নাম্বারটি এবং ট্রানজেকশন আইডি টি নিচের ফরমে সাবমিট করুন। যদি আপনি অন্য কোনো মাধ্যমে পেমেন্ট করতে চান তাহলে আমাদের ফেসবুক পেইজে ম্যাসেজ করুন বা সরাসরি কল করুন। <br /> ধন্যবাদ</p>
                                                 <p className="lead">Number is: 0123456789</p>
                                                 <hr />
@@ -116,16 +115,17 @@ const CheckOut = () => {
                                             </div>
                                             <div class="input-group">
                                                 <input type="text" class="form-control" placeholder="Nagad Transaction ID" aria-label="Dollar amount " />
-
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-
-                        <button className="btn btn-success btn-lg btn-block mt-5 mb-2">Check Out</button>
+                        <div>
+                            <Link to="/purchase-history">
+                                <button className="btn btn-success btn-lg btn-block mt-5 mb-2">Check Out</button>
+                            </Link>
+                        </div>
                     </div>
                 </div>
 

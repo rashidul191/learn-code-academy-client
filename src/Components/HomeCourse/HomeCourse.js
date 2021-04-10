@@ -18,8 +18,9 @@ const HomeCourse = () => {
                                 <h5 class="card-title">Compleat Web Programming Course</h5>
                             </Link>
                             <hr />
-                            <p>Create By <span>Rashidul Islam</span>
-                                <br /> Enrolled 191
+                            <p>Create By : <span>Rashidul Islam</span>
+                                <br /> Enrolled : 191 Students
+                                <br /> Lesson : 45
                            <br /> Students Retting 4.7 ⭐⭐⭐⭐⭐</p>
                             <hr />
                             <div className="row mx-3">

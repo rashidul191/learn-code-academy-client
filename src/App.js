@@ -19,6 +19,9 @@ import TcConditeion from './Components/TcConditeion/TcConditeion';
 import CoursesDetails from './Components/HomeCourse/CoursesDetails/CoursesDetails';
 import CheckOut from './Components/CheckOut/CheckOut';
 import UserDashboard from './Components/UserDashboard/UserDashboard';
+import MyCourse from './Components/UserDashboard/MyCourse/MyCourse';
+import PurchaseHistory from './Components/UserDashboard/PurchaseHistory/PurchaseHistory';
+import UserNotification from './Components/UserDashboard/UserNotification/UserNotification';
 
 function App() {
   return (
@@ -66,14 +69,27 @@ function App() {
             <PrivacyPolicy></PrivacyPolicy>
           </Route>
 
-          
+
           <Route path="/terms-of-service">
             <TcConditeion></TcConditeion>
+          </Route>
+
+          <Route path="/purchase-history">
+            <PurchaseHistory></PurchaseHistory>
           </Route>
 
           <Route path="/user-dashboard">
             <UserDashboard></UserDashboard>
           </Route>
+
+          <Route path="/my-course">
+            <MyCourse></MyCourse>
+          </Route>
+
+          <Route path="/user-notifications">
+           <UserNotification></UserNotification>
+          </Route>         
+
 
           <Route path="*">
             <NoMatch />

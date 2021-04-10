@@ -1,0 +1,21 @@
+.profile-bg-img{
+    height: auto;
+    width: 100%;
+    background-image: url('../../../Images/profile-bg-img.jpg');
+    
+}
+
+.profile-bg-color{
+    background: rgba(202, 149, 149, 0.8);
+    color: white;
+}
+
+.user-profile{
+    height: 150px;
+    width: 150px;
+}
+
+.purchase-img-size{
+    height: 70px;
+    width: 150px;
+}
