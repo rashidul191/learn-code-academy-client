@@ -5,18 +5,18 @@ import firebaseConfig from "./firebase.config";
 import { useState } from "react";
 import Navbar from "../ShareFile/Navbar/Navbar";
 import Footer from "../ShareFile/Footer/Footer";
-import { useForm } from "react-hook-form";
+// import { useForm } from "react-hook-form";
 
 firebase.initializeApp(firebaseConfig);
 
 function SignIn() {
-  const {
-    register,
-    formState: { errors },
-  } = useForm(); // handleFromSubmit,  initialize the hook
-  const onSubmit = (data) => {
-    console.log(data);
-  };
+  // const {
+  //   register,
+  //   formState: { errors },
+  // } = useForm(); // handleFromSubmit,  initialize the hook
+  // const onSubmit = (data) => {
+  //   console.log(data);
+  // };
 
   const [newUser, setNewUser] = useState(false);
   const [user, setUser] = useState({
@@ -28,7 +28,7 @@ function SignIn() {
     error: "",
     success: false,
   });
-  const fbprovider = new firebase.auth.FacebookAuthProvider();
+
   const provider = new firebase.auth.GoogleAuthProvider();
 
   const handleSignIn = () => {
@@ -54,6 +54,7 @@ function SignIn() {
       });
   };
 
+  const fbprovider = new firebase.auth.FacebookAuthProvider();
   const handleFBLogin = () => {
     firebase
       .auth()
@@ -89,8 +90,8 @@ function SignIn() {
   };
 
   const handleSubmit = (e) => {
-    //  console.log(user.email, user.password);
     if (newUser && user.email && user.password) {
+      // console.log("suming done");
       firebase
         .auth()
         .createUserWithEmailAndPassword(user.email, user.password)
@@ -100,6 +101,7 @@ function SignIn() {
           newUserInfo.success = true;
           setUser(newUserInfo);
           updateUserName(user.name);
+          //console.log(res);
         })
         .catch((error) => {
           const newUserInfo = { ...user };
@@ -118,7 +120,7 @@ function SignIn() {
           newUserInfo.error = "";
           newUserInfo.success = true;
           setUser(newUserInfo);
-          console.log("Sign In user info", res.user);
+          console.log("Sign In User", res.user);
         })
         .catch((error) => {
           const newUserInfo = { ...user };
@@ -127,12 +129,33 @@ function SignIn() {
           setUser(newUserInfo);
         });
     }
+
     e.preventDefault();
+  };
+
+  const handleBlur = (e) => {
+    let isFieldValid = true;
+
+    // console.log(e.target.name, e.target.value);
+    if (e.target.name === "email") {
+      isFieldValid = /\S+@\S+\.\S+/.test(e.target.value);
+      // console.log(isFieldValid);
+    }
+    if (e.target.name === "password") {
+      const isPasswordValide = e.target.value.length > 8;
+      const passwordHasNumber = /\d{1}/.test(e.target.value);
+      isFieldValid = isPasswordValide && passwordHasNumber;
+      //console.log(isPasswordValide && passwordHasNumber);
+    }
+    if (isFieldValid) {
+      const newUserInfo = { ...user };
+      newUserInfo[e.target.name] = e.target.value;
+      setUser(newUserInfo);
+    }
   };
 
   const updateUserName = (name) => {
     const user = firebase.auth().currentUser;
-
     user
       .updateProfile({
         displayName: name,
@@ -145,24 +168,6 @@ function SignIn() {
       });
   };
 
-  const handleBlur = (e) => {
-    // console.log(e.target.value);
-    let isFieldValid = true;
-    if (e.target.name === "email") {
-      isFieldValid = /\S+@\S+\.\S+/.test(e.target.value);
-    }
-    if (e.target.name === "password") {
-      const isPasswordValide = e.target.value.length > 6;
-      const passwordHasNumber = /\d{1}/.test(e.target.value);
-      isFieldValid = isPasswordValide && passwordHasNumber;
-    }
-    if (isFieldValid) {
-      const newUserInfo = { ...user };
-      newUserInfo[e.target.name] = e.target.value;
-      setUser(newUserInfo);
-    }
-  };
-
   return (
     <section id="sign-In">
       <Navbar></Navbar>
@@ -172,18 +177,41 @@ function SignIn() {
             <div>
               <h3 className="display-4 text-light">Sign In</h3>
             </div>
+
             <div className="row">
               <div className="col-lg-8 col-md-10 sign-body-bg">
                 <div className="form-body">
-                  {/* {
-                    user.inSignedIn && <div>
-                    <h2>Welcome , {user.name}</h2>
+                  {/* google login information  here */}
+                  {user.inSignedIn && (
+                    <div>
+                      <h2>Welcome , {user.name}</h2>
                       <p>Your Email: {user.email}</p>
-                <img src={user.photo} alt="imges here" />
-                       </div>
-                      } */}
+                      <img src={user.photo} alt="imges here" />
+                    </div>
+                  )}
+                  {/* google login information  here */}
+
+                  <h1>Our own Authentication</h1>
 
                   <form onSubmit={handleSubmit} action="">
+                    {newUser && (
+                      <div>
+                        <input type="text" onBlur={handleBlur} name="name" placeholder="your name" />
+                        <br />
+                      </div>
+                    )}
+                    <input type="email" onBlur={handleBlur} name="email" placeholder="your email" required />
+                    <br />
+                    <input type="password" onBlur={handleBlur} name="password" placeholder="your password" required />
+                    <br />
+
+                    <input type="checkbox" onChange={() => setNewUser(!newUser)} name="" id="createAccount" />
+                    <label htmlFor="createAccount">Create a New Account</label>
+                    <br />
+                    <input type="submit" value={newUser ? "Sign Up" : "Sign In"} />
+                  </form>
+
+                  {/* <form onSubmit={handleSubmit} action="">
                     <div className="input-group-lg">
                       {newUser && (
                         <div className="input-group-lg">
@@ -227,15 +255,16 @@ function SignIn() {
                         Password:
                       </label>
                       <input
+                        className="form-control"
                         onBlur={handleBlur}
-                        className="form-control "
                         type="password"
                         name="password"
                         id="password"
                         placeholder="Password"
                         required
-                        {...register("password", { pattern: /\d+/ })}
+                        {...register("password", { required: true })}
                       />
+
                       {errors.password && <span>Password is required</span>}
                     </div>
                     <div className="row mx-4 pt-2">
@@ -244,14 +273,14 @@ function SignIn() {
                         <label htmlFor="rememberMe">Remember Me</label>
                       </div>
                       <div className="ml-auto">
-                        <input type="checkbox" onBlur={() => setNewUser(!newUser)} name="newUser" id="" />
-                        <label htmlFor="newUser">New User Sign Up</label>
+                        <input type="checkbox" onBlur={() => setNewUser(!newUser)} name="" id="createAccount" />
+                        <label htmlFor="createAccount">Create New Account</label>
                       </div>
                     </div>
                     <div className="mx-4 py-3">
                       <input className="btn btn-success btn-block btn-lg" type="submit" value={newUser ? "Sign Up" : "Sign In"} />
                     </div>
-                  </form>
+                  </form> */}
 
                   <div>
                     <div>
@@ -270,9 +299,13 @@ function SignIn() {
                       <button onClick={handleFBLogin}>Facebook Sign In</button>
                     </div>
                   </div>
+
                   <div>
-                    <p className="err-masseges">{user.err}</p>
-                    {user.success && <p className="success-create">User {newUser ? "Created" : "Logged In"} Successfully</p>}
+                    {/* error masseges here */}
+                    <p style={{ color: "red" }}>{user.error}</p>
+
+                    {/* success masseges here */}
+                    {user.success && <p style={{ color: "green" }}>User {newUser ? "Created" : "Logged In"} Successfully</p>}
                   </div>
                 </div>
               </div>
