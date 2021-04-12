@@ -2,12 +2,18 @@ import "./SignIn.css";
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from "./firebase.config";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Navbar from "../ShareFile/Navbar/Navbar";
 import Footer from "../ShareFile/Footer/Footer";
+import { UserContext } from "../../App";
+import { useHistory, useLocation } from "react-router";
 // import { useForm } from "react-hook-form";
 
-firebase.initializeApp(firebaseConfig);
+if (firebase.apps.lenght === 0) {
+  firebase.initializeApp(firebaseConfig);
+}
+
+// firebase.initializeApp(firebaseConfig);
 
 function SignIn() {
   // const {
@@ -29,6 +35,11 @@ function SignIn() {
     success: false,
   });
 
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const history = useHistory();
+  const location = useLocation();
+  let { from } = location.state || { from: { pathname: "/user-dashboard" } };
+
   const provider = new firebase.auth.GoogleAuthProvider();
 
   const handleSignIn = () => {
@@ -44,13 +55,16 @@ function SignIn() {
           photo: photoURL,
         };
         setUser(signedInUser);
-        console.log(displayName, email, photoURL);
+        setLoggedInUser(signedInUser);
+        history.replace(from);
+        // console.log(displayName, email, photoURL);
       })
-      .catch((err) => {
-        const errCode = err.code;
-        const errMessage = err.message;
-        const email = err.email;
-        console.log(errCode, errMessage, email);
+      .catch((error) => {
+        const newUserInfo = { ...user };
+        newUserInfo.error = error.message;
+        newUserInfo.success = false;
+        setUser(newUserInfo);
+        //   console.log(errCode, errMessage, email);
       });
   };
 
@@ -60,14 +74,22 @@ function SignIn() {
       .auth()
       .signInWithPopup(fbprovider)
       .then((res) => {
-        const user = res.user;
-        console.log(user);
+        const { displayName, email, photoURL } = res.user;
+        const signedInFbUser = {
+          inSignedIn: true,
+          name: displayName,
+          email: email,
+          photo: photoURL,
+        };
+        setUser(signedInFbUser);
+        setLoggedInUser(signedInFbUser);
+        history.replace(from);
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        const email = error.email;
-        console.log(errorCode, errorMessage, email);
+        const newUserInfo = { ...user };
+        newUserInfo.error = error.message;
+        newUserInfo.success = false;
+        setUser(newUserInfo);
       });
   };
 
@@ -84,8 +106,11 @@ function SignIn() {
         };
         setUser(signOutUser);
       })
-      .catch((err) => {
-        console.log(err);
+      .catch((error) => {
+        const newUserInfo = { ...user };
+        newUserInfo.error = error.message;
+        newUserInfo.success = false;
+        setUser(newUserInfo);
       });
   };
 
@@ -94,14 +119,15 @@ function SignIn() {
       // console.log("suming done");
       firebase
         .auth()
-        .createUserWithEmailAndPassword(user.email, user.password)
+        .createUserWithEmailAndPassword(user.name, user.email, user.password)
         .then((res) => {
           const newUserInfo = { ...user };
           newUserInfo.error = "";
           newUserInfo.success = true;
           setUser(newUserInfo);
+          setLoggedInUser(newUserInfo);
+          history.replace(from);
           updateUserName(user.name);
-          //console.log(res);
         })
         .catch((error) => {
           const newUserInfo = { ...user };
@@ -120,7 +146,9 @@ function SignIn() {
           newUserInfo.error = "";
           newUserInfo.success = true;
           setUser(newUserInfo);
-          console.log("Sign In User", res.user);
+          setLoggedInUser(newUserInfo);
+          history.replace(from);
+          // console.log("Sign In User", res.user);
         })
         .catch((error) => {
           const newUserInfo = { ...user };
@@ -174,9 +202,7 @@ function SignIn() {
       <div className="sign-in-img">
         <div className="sign-in-bg">
           <div className="container py-5">
-            <div>
-              <h3 className="display-4 text-light">Sign In</h3>
-            </div>
+            <div>{newUser ? <h3 className="display-4 text-light">Registration Now</h3> : <h3 className="display-4 text-light">Sign In</h3>}</div>
 
             <div className="row">
               <div className="col-lg-8 col-md-10 sign-body-bg">
@@ -190,9 +216,6 @@ function SignIn() {
                     </div>
                   )}
                   {/* google login information  here */}
-
-                  <h1>Our own Authentication</h1>
-
                   <form onSubmit={handleSubmit} action="">
                     {newUser && (
                       <div>

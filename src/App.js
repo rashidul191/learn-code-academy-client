@@ -1,4 +1,4 @@
-import './App.css';
+import "./App.css";
 import React, { createContext, useState } from "react";
 import {
   BrowserRouter as Router,
@@ -7,34 +7,34 @@ import {
   // Link
 } from "react-router-dom";
 
-import Home from './Components/Home/Home';
-import SignIn from './Components/SignIn/SignIn';
-import NoMatch from './Components/NoMatch/NoMatch';
-import ContactMe from './Components/ContactMe/ContactMe';
-import Courses from './Components/HomeCourse/Courses/Courses';
-import AboutUs from './Components/AboutUs/AboutUs';
-import OurBlogDetails from './Components/OurBlog/OurBlogDetails/OurBlogDetails';
-import PrivacyPolicy from './Components/PrivacyPolicy/PrivacyPolicy';
-import TcConditeion from './Components/TcConditeion/TcConditeion';
-import CoursesDetails from './Components/HomeCourse/CoursesDetails/CoursesDetails';
-import CheckOut from './Components/CheckOut/CheckOut';
-import UserDashboard from './Components/UserDashboard/UserDashboard';
-import MyCourse from './Components/UserDashboard/MyCourse/MyCourse';
-import PurchaseHistory from './Components/UserDashboard/PurchaseHistory/PurchaseHistory';
-import UserNotification from './Components/UserDashboard/UserNotification/UserNotification';
-import Instructor from './Components/Instructor/Instructor';
+import Home from "./Components/Home/Home";
+import SignIn from "./Components/SignIn/SignIn";
+import NoMatch from "./Components/NoMatch/NoMatch";
+import ContactMe from "./Components/ContactMe/ContactMe";
+import Courses from "./Components/HomeCourse/Courses/Courses";
+import AboutUs from "./Components/AboutUs/AboutUs";
+import OurBlogDetails from "./Components/OurBlog/OurBlogDetails/OurBlogDetails";
+import PrivacyPolicy from "./Components/PrivacyPolicy/PrivacyPolicy";
+import TcConditeion from "./Components/TcConditeion/TcConditeion";
+import CoursesDetails from "./Components/HomeCourse/CoursesDetails/CoursesDetails";
+import CheckOut from "./Components/CheckOut/CheckOut";
+import UserDashboard from "./Components/UserDashboard/UserDashboard";
+import MyCourse from "./Components/UserDashboard/MyCourse/MyCourse";
+import PurchaseHistory from "./Components/UserDashboard/PurchaseHistory/PurchaseHistory";
+import UserNotification from "./Components/UserDashboard/UserNotification/UserNotification";
+import Instructor from "./Components/Instructor/Instructor";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 
-// export const UserContext = createContext();
-
+export const UserContext = createContext();
 function App() {
-  // const [loggedInUser, setLoggedInUser] = useState ({});
+  const [loggedInUser, setLoggedInUser] = useState({});
 
   return (
-    // <UserContext.Provider value = {[loggedInUser, setLoggedInUser]}>
-        <div>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <h3>Email: {loggedInUser.email}</h3>
+      {/* <div> */}
       <Router>
         <Switch>
-
           <Route exact path="/">
             <Home></Home>
           </Route>
@@ -63,25 +63,25 @@ function App() {
             <SignIn></SignIn>
           </Route>
 
-          <Route path="/check-out">
+          <PrivateRoute path="/check-out">
             <CheckOut></CheckOut>
-          </Route>
+          </PrivateRoute>
 
-          <Route path="/purchase-history">
-            <PurchaseHistory></PurchaseHistory>
-          </Route>
-
-          <Route path="/user-dashboard">
+          <PrivateRoute path="/user-dashboard">
             <UserDashboard></UserDashboard>
-          </Route>
+          </PrivateRoute>
 
-          <Route path="/my-course">
+          <PrivateRoute path="/my-course">
             <MyCourse></MyCourse>
-          </Route>
+          </PrivateRoute>
 
-          <Route path="/user-notifications">
+          <PrivateRoute path="/purchase-history">
+            <PurchaseHistory></PurchaseHistory>
+          </PrivateRoute>
+
+          <PrivateRoute path="/user-notifications">
             <UserNotification></UserNotification>
-          </Route>
+          </PrivateRoute>
 
           <Route path="/about-us">
             <AboutUs></AboutUs>
@@ -95,21 +95,18 @@ function App() {
             <PrivacyPolicy></PrivacyPolicy>
           </Route>
 
-
           <Route path="/terms-of-service">
             <TcConditeion></TcConditeion>
           </Route>
 
-
           <Route path="*">
             <NoMatch />
           </Route>
-
         </Switch>
       </Router>
 
-    </div>
-    //  </UserContext.Provider> 
+      {/* </div> */}
+    </UserContext.Provider>
   );
 }
 
