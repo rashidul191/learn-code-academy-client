@@ -9,11 +9,13 @@ import { UserContext } from "../../App";
 import { useHistory, useLocation } from "react-router";
 // import { useForm } from "react-hook-form";
 
-if (firebase.apps.lenght === 0) {
-  firebase.initializeApp(firebaseConfig);
-}
 
-// firebase.initializeApp(firebaseConfig);
+// if (firebase.apps.lenght === 0) {
+//   firebase.initializeApp(firebaseConfig);
+// }
+
+
+firebase.initializeApp(firebaseConfig);
 
 function SignIn() {
   // const {
@@ -40,9 +42,9 @@ function SignIn() {
   const location = useLocation();
   let { from } = location.state || { from: { pathname: "/user-dashboard" } };
 
+  // google sign in here
   const provider = new firebase.auth.GoogleAuthProvider();
-
-  const handleSignIn = () => {
+  const handleGoogleSignIn = () => {
     firebase
       .auth()
       .signInWithPopup(provider)
@@ -53,6 +55,7 @@ function SignIn() {
           name: displayName,
           email: email,
           photo: photoURL,
+          success: true,
         };
         setUser(signedInUser);
         setLoggedInUser(signedInUser);
@@ -68,21 +71,23 @@ function SignIn() {
       });
   };
 
+  // facebook sign in here
   const fbprovider = new firebase.auth.FacebookAuthProvider();
-  const handleFBLogin = () => {
+  const handleFBSignIn = () => {
     firebase
       .auth()
       .signInWithPopup(fbprovider)
       .then((res) => {
         const { displayName, email, photoURL } = res.user;
-        const signedInFbUser = {
+        const signedInUser = {
           inSignedIn: true,
           name: displayName,
           email: email,
           photo: photoURL,
+          success: true,
         };
-        setUser(signedInFbUser);
-        setLoggedInUser(signedInFbUser);
+        setUser(signedInUser);
+        setLoggedInUser(signedInUser);
         history.replace(from);
       })
       .catch((error) => {
@@ -93,6 +98,7 @@ function SignIn() {
       });
   };
 
+  // user sign out here
   const handleSignOut = () => {
     firebase
       .auth()
@@ -103,8 +109,11 @@ function SignIn() {
           name: "",
           email: "",
           photo: "",
+          error: "",
+          success: false,
         };
         setUser(signOutUser);
+        setLoggedInUser(signOutUser);
       })
       .catch((error) => {
         const newUserInfo = { ...user };
@@ -114,20 +123,24 @@ function SignIn() {
       });
   };
 
+  // user create new a account / user sign in here
   const handleSubmit = (e) => {
     if (newUser && user.email && user.password) {
       // console.log("suming done");
       firebase
         .auth()
-        .createUserWithEmailAndPassword(user.name, user.email, user.password)
+        .createUserWithEmailAndPassword(user.email, user.password)
         .then((res) => {
           const newUserInfo = { ...user };
+          // const newUserInfo = res.user;
+
           newUserInfo.error = "";
           newUserInfo.success = true;
           setUser(newUserInfo);
           setLoggedInUser(newUserInfo);
           history.replace(from);
           updateUserName(user.name);
+          // updateUserName(name);
         })
         .catch((error) => {
           const newUserInfo = { ...user };
@@ -157,10 +170,10 @@ function SignIn() {
           setUser(newUserInfo);
         });
     }
-
     e.preventDefault();
   };
 
+  // from blur here
   const handleBlur = (e) => {
     let isFieldValid = true;
 
@@ -182,6 +195,7 @@ function SignIn() {
     }
   };
 
+  // user name update here
   const updateUserName = (name) => {
     const user = firebase.auth().currentUser;
     user
@@ -219,7 +233,7 @@ function SignIn() {
                   <form onSubmit={handleSubmit} action="">
                     {newUser && (
                       <div>
-                        <input type="text" onBlur={handleBlur} name="name" placeholder="your name" />
+                        <input type="text" onBlur={handleBlur} name="name" placeholder="your name" required/>
                         <br />
                       </div>
                     )}
@@ -312,14 +326,14 @@ function SignIn() {
                           Sign Out
                         </button>
                       ) : (
-                        <button className="btn btn-success" onClick={handleSignIn}>
+                        <button className="btn btn-success" onClick={handleGoogleSignIn}>
                           Google Sign In
                         </button>
                       )}
                     </div>
                     <br />
                     <div>
-                      <button onClick={handleFBLogin}>Facebook Sign In</button>
+                      <button onClick={handleFBSignIn}>Facebook Sign In</button>
                     </div>
                   </div>
 

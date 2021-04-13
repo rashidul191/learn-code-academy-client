@@ -1,20 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Footer from '../../ShareFile/Footer/Footer';
 import Navbar from '../../ShareFile/Navbar/Navbar';
 import userProfile from '../../../Images/logo/profile-icon.png';
 import './PurchaseHistory.css';
 import { Link } from 'react-router-dom';
 import thumbale from '../../../Images/thumbale.jpg';
+import { UserContext } from '../../../App';
 
 const PurchaseHistory = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
         <section id="purchase-History">
             <Navbar></Navbar>
             <div className="container pb-3">
                 <div className="profile-bg-img">
                     <div className="text-center profile-bg-color my-5 py-5">
-                        <img className="user-profile img-fluid" src={userProfile} alt="User Images" />
-                        <h3>Name: Rashidul Islam</h3>
+                       {loggedInUser.photo?<img src={loggedInUser.photo} alt="Image"/>
+                       :<img className="user-profile img-fluid" src={userProfile} alt="User Images" />}
+                        <h3>{loggedInUser.name}</h3>
                     </div>
                 </div>
 
@@ -41,7 +44,7 @@ const PurchaseHistory = () => {
                                     <Link class="nav-link mx-5 user-link" to="/purchase-history">Purchase History</Link>
                                 </li>
                                 <li class="nav-item active ">
-                                    <button className="btn btn-info ml-5">LogOut</button>
+                                    <button className="btn btn-danger ml-5" onClick={() => setLoggedInUser({})}>LogOut</button>
                                 </li>
                             </ul>
                         </div>
