@@ -12,7 +12,7 @@ const CheckOut = () => {
             <h3 className="bg-dark text-center text-light mt-3 py-4 display-4">Check Out</h3>
             <div className="container">
                 <div className="table-part py-4">
-                    <table class="table  ">
+                    <table class="table">
                         <thead>
                             <tr>
                                 <th scope="col">S/L</th>

@@ -31,8 +31,8 @@ function App() {
 
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-      <h3>Email: {loggedInUser.email}</h3>
-      {/* <div> */}
+      {/* <h3>Email: {loggedInUser.email}</h3> */}
+
       <Router>
         <Switch>
           <Route exact path="/">
@@ -104,8 +104,6 @@ function App() {
           </Route>
         </Switch>
       </Router>
-
-      {/* </div> */}
     </UserContext.Provider>
   );
 }
