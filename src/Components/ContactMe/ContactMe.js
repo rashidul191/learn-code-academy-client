@@ -43,8 +43,8 @@ const ContactMe = () => {
                     <input type="text" class="form-control form-control-lg" name="" id="" placeholder="Phone Number" />
                   </div>
                   <div class="form-group">
-                    <textarea class="form-control form-control-lg" id="" rows="4">
-                      Message
+                    <textarea class="form-control form-control-lg" id="" rows="4" placeholder="Message">
+                      
                     </textarea>
                   </div>
                   <div class="form-group ">
