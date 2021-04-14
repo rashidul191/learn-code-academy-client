@@ -269,7 +269,7 @@ function SignIn() {
                         <div className="row">
                           <div className="col-md-6 col-sm-12">
                             <div className="input-group-lg my-2">
-                              <input className="form-control " type="text" onBlur={handleBlur} name="name" placeholder="Zip Code" required />
+                              <input className="form-control " type="text" onBlur={handleBlur} name="zipCode" placeholder="Zip Code" required />
                             </div>
                           </div>
                           <div className="col-md-6 col-sm-12">
@@ -278,7 +278,7 @@ function SignIn() {
                                 className="form-control "
                                 type="text"
                                 onBlur={handleBlur}
-                                name="phoneNumber"
+                                name="phone"
                                 placeholder="Phone Number"
                                 required
                               />

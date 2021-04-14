@@ -26,8 +26,8 @@ const Navbar = () => {
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active mr-4">
+            <ul class="navbar-nav ml-auto text-center">
+              <li class="nav-item active mx-4">
                 <Link class="nav-link link-style" to="/home">
                   Home{" "}
                 </Link>

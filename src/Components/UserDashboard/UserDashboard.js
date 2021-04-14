@@ -55,6 +55,11 @@ const UserDashboard = () => {
                   </tr>
 
                   <tr>
+                    <td scope="row">Phone Number: </td>
+                    <th> {loggedInUser.zipCode}</th>
+                  </tr>
+
+                  <tr>
                     <td scope="row">Facebook: </td>
                     <th>{loggedInUser.FbLink}</th>
                   </tr>

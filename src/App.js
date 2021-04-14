@@ -24,6 +24,7 @@ import PurchaseHistory from "./Components/UserDashboard/PurchaseHistory/Purchase
 import UserNotification from "./Components/UserDashboard/UserNotification/UserNotification";
 import Instructor from "./Components/Instructor/Instructor";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
+import CoursesReview from "./Components/UserDashboard/CoursesReview/CoursesReview";
 
 export const UserContext = createContext();
 function App() {
@@ -63,7 +64,8 @@ function App() {
             <SignIn></SignIn>
           </Route>
 
-          <PrivateRoute path="/check-out">
+          {/* private route start here */}
+          {/* <PrivateRoute path="/check-out">
             <CheckOut></CheckOut>
           </PrivateRoute>
 
@@ -75,13 +77,41 @@ function App() {
             <MyCourse></MyCourse>
           </PrivateRoute>
 
+          <PrivateRoute path="/course-review">
+            <CoursesReview></CoursesReview>
+          </PrivateRoute>
+
           <PrivateRoute path="/purchase-history">
             <PurchaseHistory></PurchaseHistory>
           </PrivateRoute>
 
           <PrivateRoute path="/user-notifications">
             <UserNotification></UserNotification>
-          </PrivateRoute>
+          </PrivateRoute> */}
+
+          <Route path="/check-out">
+            <CheckOut></CheckOut>
+          </Route>
+
+          <Route path="/user-dashboard">
+            <UserDashboard></UserDashboard>
+          </Route>
+
+          <Route path="/my-course">
+            <MyCourse></MyCourse>
+          </Route>
+
+          <Route path="/course-review">
+            <CoursesReview></CoursesReview>
+          </Route>
+
+          <Route path="/purchase-history">
+            <PurchaseHistory></PurchaseHistory>
+          </Route>
+
+          <Route path="/user-notifications">
+            <UserNotification></UserNotification>
+          </Route>
 
           <Route path="/about-us">
             <AboutUs></AboutUs>

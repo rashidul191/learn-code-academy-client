@@ -92,9 +92,12 @@ const MyCourse = () => {
                 <br /> Students Retting 4.7 ⭐⭐⭐⭐⭐
               </p>
               <hr />
-              <div className=" mx-3">
-                <Link to="/lesson" className="ml-auto">
-                  <button className="btn btn-success btn-lg btn-block">Go To Lesson</button>
+              <div className="row">
+                <Link to="/lesson" className="">
+                  <button className="btn btn-success mr-3">Go To Lesson</button>
+                </Link>
+                <Link to="/course-review" className="">
+                  <button className="btn btn-success ml-3 ">Go To Review</button>
                 </Link>
               </div>
             </div>
