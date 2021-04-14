@@ -1,4 +1,6 @@
 import "./SignIn.css";
+import googleSignInImg from "../../Images/logo/google logo.png";
+import facebookSignInImg from "../../Images/logo/Facebook-logo.png";
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from "./firebase.config";
@@ -9,11 +11,9 @@ import { UserContext } from "../../App";
 import { useHistory, useLocation } from "react-router";
 // import { useForm } from "react-hook-form";
 
-
 // if (firebase.apps.lenght === 0) {
 //   firebase.initializeApp(firebaseConfig);
 // }
-
 
 firebase.initializeApp(firebaseConfig);
 
@@ -216,36 +216,98 @@ function SignIn() {
       <div className="sign-in-img">
         <div className="sign-in-bg">
           <div className="container py-5">
-            <div>{newUser ? <h3 className="display-4 text-light">Registration Now</h3> : <h3 className="display-4 text-light">Sign In</h3>}</div>
-
             <div className="row">
               <div className="col-lg-8 col-md-10 sign-body-bg">
                 <div className="form-body">
+                  <div>
+                    {newUser ? (
+                      <h3 className="display-4 text-center mb-3">Registration Now</h3>
+                    ) : (
+                      <h3 className="display-4 text-center text-success mb-5">Sign In</h3>
+                    )}
+                  </div>
                   {/* google login information  here */}
-                  {user.inSignedIn && (
+                  {/* {user.inSignedIn && (
                     <div>
                       <h2>Welcome , {user.name}</h2>
                       <p>Your Email: {user.email}</p>
                       <img src={user.photo} alt="imges here" />
                     </div>
-                  )}
+                  )} */}
                   {/* google login information  here */}
                   <form onSubmit={handleSubmit} action="">
                     {newUser && (
-                      <div>
-                        <input type="text" onBlur={handleBlur} name="name" placeholder="your name" required/>
-                        <br />
+                      <div className="newUser-form">
+                        <div className="input-group-lg my-2">
+                          <input className="form-control " type="text" onBlur={handleBlur} name="name" placeholder="Full Name" required />
+                        </div>
+                        <div className="input-group-lg my-2">
+                          <input className="form-control " type="text" onBlur={handleBlur} name="address" placeholder="Address" required />
+                        </div>
                       </div>
                     )}
-                    <input type="email" onBlur={handleBlur} name="email" placeholder="your email" required />
-                    <br />
-                    <input type="password" onBlur={handleBlur} name="password" placeholder="your password" required />
-                    <br />
+                    <div className="input-group-lg my-2">
+                      <input className="form-control " type="email" onBlur={handleBlur} name="email" placeholder="email@example.com" required />
+                    </div>
+                    <div className="input-group-lg my-2">
+                      <input className="form-control " type="password" onBlur={handleBlur} name="password" placeholder="Password" required />
+                    </div>
 
-                    <input type="checkbox" onChange={() => setNewUser(!newUser)} name="" id="createAccount" />
-                    <label htmlFor="createAccount">Create a New Account</label>
-                    <br />
-                    <input type="submit" value={newUser ? "Sign Up" : "Sign In"} />
+                    {newUser && (
+                      <div className="newUser-form">
+                        <div className="input-group-lg my-2">
+                          <input
+                            className="form-control "
+                            type="password"
+                            onBlur={handleBlur}
+                            name="password"
+                            placeholder="Conform Password"
+                            required
+                          />
+                        </div>
+
+                        <div className="row">
+                          <div className="col-md-6 col-sm-12">
+                            <div className="input-group-lg my-2">
+                              <input className="form-control " type="text" onBlur={handleBlur} name="name" placeholder="Zip Code" required />
+                            </div>
+                          </div>
+                          <div className="col-md-6 col-sm-12">
+                            <div className="input-group-lg my-2">
+                              <input
+                                className="form-control "
+                                type="text"
+                                onBlur={handleBlur}
+                                name="phoneNumber"
+                                placeholder="Phone Number"
+                                required
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                    <div className="row mx-5 py-3">
+                      <div className="ml-auto">
+                        <input type="checkbox" onChange={() => setNewUser(!newUser)} name="" id="createAccount" />
+                        <label htmlFor="createAccount">Create a New Account</label>
+                      </div>
+                    </div>
+                    {newUser && (
+                      <div className="newUser-form">
+                        <div>
+                          <ul>
+                            <li>At least 8 characters</li>
+                            <li>A mixture of both uppercase and lowercase letters</li>
+                            <li>A mixture of letters and numbers</li>
+                          </ul>
+                        </div>
+                      </div>
+                    )}
+
+                    <div className="input-group-lg mx-5">
+                      <input className="form-control btn btn-success" type="submit" value={newUser ? "Registration" : "Sign In"} />
+                    </div>
                   </form>
 
                   {/* <form onSubmit={handleSubmit} action="">
@@ -318,31 +380,52 @@ function SignIn() {
                       <input className="btn btn-success btn-block btn-lg" type="submit" value={newUser ? "Sign Up" : "Sign In"} />
                     </div>
                   </form> */}
-
                   <div>
+                    <p className="lead or-text-style my-4"> or </p>
+                  </div>
+
+                  <div className="text-center">
                     <div>
                       {user.inSignedIn ? (
                         <button className="btn btn-danger" onClick={handleSignOut}>
                           Sign Out
                         </button>
                       ) : (
-                        <button className="btn btn-success" onClick={handleGoogleSignIn}>
-                          Google Sign In
-                        </button>
+                        <div className="socail-icon-sing">
+                          <div onClick={handleGoogleSignIn} className="">
+                            <div className="row mx-5 mt-1">
+                              <img className="img-fluid socail-icon-size" src={googleSignInImg} alt="" />
+                              <label className="ml-auto" htmlFor="">
+                                Sign In with Google
+                              </label>
+                            </div>
+                          </div>
+                        </div>
                       )}
                     </div>
                     <br />
-                    <div>
-                      <button onClick={handleFBSignIn}>Facebook Sign In</button>
+                    <div className="socail-icon-sing">
+                      <div onClick={handleFBSignIn} className="">
+                        <div className="row mx-5 mt-1">
+                          <img className="img-fluid socail-icon-size" src={facebookSignInImg} alt="" />
+                          <label className="ml-auto" htmlFor="">Sign In with Facebook</label>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
                   <div>
                     {/* error masseges here */}
-                    <p style={{ color: "red" }}>{user.error}</p>
+                    <p className="text-center mt-4" style={{ color: "red" }}>
+                      {user.error}
+                    </p>
 
                     {/* success masseges here */}
-                    {user.success && <p style={{ color: "green" }}>User {newUser ? "Created" : "Logged In"} Successfully</p>}
+                    {user.success && (
+                      <p className="text-center mt-4" style={{ color: "green" }}>
+                        User {newUser ? "Created" : "Logged In"} Successfully
+                      </p>
+                    )}
                   </div>
                 </div>
               </div>

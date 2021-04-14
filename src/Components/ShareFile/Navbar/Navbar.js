@@ -42,23 +42,25 @@ const Navbar = () => {
                   Contact Us
                 </Link>
               </li>
-              <li class="nav-item active ml-4">
+              <li class="nav-item active mx-4">
                 <Link class="nav-link  link-style" to="/our-blogs">
                   Our Blogs
                 </Link>
               </li>
 
-              <li class="nav-item active ml-5">
+              <li class="nav-item active ">
                 {loggedInUser.email ? (
-                  <div>
-                    <p>name: {loggedInUser.name}</p>
-                    <button className="btn btn-danger" onClick={() => setLoggedInUser({})}>
+                  <div>                    
+                    <Link to="/user-dashboard">
+                      <button className="btn btn-info mx-4">Daeshboard</button>
+                    </Link>
+                    <button className="btn btn-danger " onClick={() => setLoggedInUser({})}>
                       Sign Out
                     </button>
                   </div>
                 ) : (
                   <Link class="nav-link " to="/sign-in">
-                    <button className="btn btn-info">Sign In</button>
+                    <button className="btn btn-info ml-4">Sign In</button>
                   </Link>
                 )}
               </li>

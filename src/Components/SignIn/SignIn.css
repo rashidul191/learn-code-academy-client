@@ -1,20 +1,40 @@
-.sign-in-img{
-    background-image: url('../../Images/login-bg.jpg');
-    background-repeat: no-repeat;
+.sign-in-img {
+  background-image: url("../../Images/login-bg.jpg");
+  background-repeat: no-repeat;
 }
 
-.sign-in-bg{
-    background: rgba(0, 0, 0, 0.7);
+.sign-in-bg {
+  background: rgba(0, 0, 0, 0.7);
 }
-.sign-body-bg{
-    padding: 30px;
-    background: rgb(205, 240, 245);
-}
-
-#sign-In .or-text-style::before{
-    content: "----------";
+.sign-body-bg {
+  padding: 30px;
+  background: rgb(205, 240, 245);
 }
 
-#sign-In .or-text-style::after{
-    content: "----------";
+#sign-In .or-text-style::before {
+  content: "-------------------";
+}
+
+#sign-In .or-text-style::after {
+  content: "------------------";
+}
+
+.or-text-style {
+    
+  text-align: center;
+}
+
+.socail-icon-sing{
+    margin: 0 auto;
+    height: 40px;
+    width: 320px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: rgb(240, 231, 214);
+ 
+}
+
+.socail-icon-size{
+    height: 30px;
+
 }
