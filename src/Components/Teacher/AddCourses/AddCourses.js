@@ -107,6 +107,9 @@ const AddCourses = () => {
                             <div class="form-group">
                               <input type="text" class="form-control form-control-lg" placeholder="Prices" />
                             </div>
+                            <div class="form-group">
+                              <input type="text" class="form-control form-control-lg" placeholder="Courses Key" />
+                            </div>
                           </div>
                         </div>
                       </div>
