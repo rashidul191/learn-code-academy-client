@@ -136,7 +136,7 @@ const CoursesDetails = () => {
                   </tr>
                   <tr>
                     <th scope="row">Quizzes:</th>
-                    <td>Yes</td>
+                    <td>No</td>
                   </tr>
                   <tr>
                     <th scope="row">Level:</th>
@@ -244,25 +244,7 @@ const CoursesDetails = () => {
             </div>
           </div>
 
-          {/* <div id="accordion" role="tablist">
-                        <div class="card">
-                            <div class="card-header" role="tab">
-                                <h5 className="mb-0">
-                                    <div data-toggle="collapse" href="#collapse1">  01 Modiul</div>
-                                    </h5>
-                            </div>
-                            <div id="collapse1" class="collapse" data-parent="#accordion">
-                                <div className="card-body">
-                                    <ol className="m-0 ">
-                                        <li>HTML</li>
-                                        <li>CSS</li>
-                                    </ol>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div> */}
+         
         </div>
 
         {/* course content sction start*/}

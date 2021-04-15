@@ -8,8 +8,7 @@ import { useForm } from "react-hook-form";
 import { UserContext } from "../../App";
 
 const CheckOut = () => {
-
-    const [loggedInUser, setLoggedInUser] = useContext (UserContext);
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
   const {
     register,
@@ -19,7 +18,6 @@ const CheckOut = () => {
   const onSubmit = (data) => {
     console.log(data);
   };
-
 
   const history = useHistory();
 
@@ -63,46 +61,98 @@ const CheckOut = () => {
               <div className="row">
                 <div className="col-lg-6">
                   <div className="form-body mx-5">
-
-                    {/* <input defaultValue="test" {...register("example")} /> */}
                     
-
                     <div className="input-group mb-2">
-                      <input class="form-control form-control-lg" type="text" name="name" defaultValue={loggedInUser.name} placeholder="Full Name" {...register("name", { required: true })} />
+                      <input
+                        class="form-control form-control-lg"
+                        type="text"
+                        name="name"
+                        defaultValue={loggedInUser.name}
+                        placeholder="Full Name *"
+                        {...register("name", { required: true })}
+                      />
                       {errors.name && <p className="error">Full Name is required</p>}
                     </div>
 
                     <div className="input-group mb-2">
-                      <input class="form-control form-control-lg" type="email" name="email" defaultValue={loggedInUser.email} placeholder="Email"  {...register("email", { required: true })} />
+                      <input
+                        class="form-control form-control-lg"
+                        type="email"
+                        name="email"
+                        defaultValue={loggedInUser.email}
+                        placeholder="Email *"
+                        {...register("email", { required: true })}
+                      />
                       {errors.email && <p className="error">Email is required</p>}
                     </div>
 
                     <div className="input-group mb-2">
-                      <input class="form-control form-control-lg" type="text" name="address" defaultValue={loggedInUser.address} placeholder="Address"  {...register("address", { required: true })} />
+                      <input
+                        class="form-control form-control-lg"
+                        type="text"
+                        name="address"
+                        defaultValue={loggedInUser.address}
+                        placeholder="Address *"
+                        {...register("address", { required: true })}
+                      />
                       {errors.address && <p className="error">Address is required</p>}
                     </div>
 
                     <div className="row">
                       <div className="col-lg-6 col-md-12">
                         <div className="input-group mb-2">
-                          <input class="form-control form-control-lg" type="text" name="zipCode" defaultValue={loggedInUser.zipCode} placeholder="Zip Code"  {...register("zipCode", { required: true })} />
+                          <input
+                            class="form-control form-control-lg"
+                            type="text"
+                            name="zipCode"
+                            defaultValue={loggedInUser.zipCode}
+                            placeholder="Zip Code *"
+                            {...register("zipCode", { required: true })}
+                          />
                           {errors.zipCode && <p className="error">Zip Code is required</p>}
                         </div>
                       </div>
                       <div className="col-lg-6 col-md-12">
                         <div className="input-group mb-2">
-                          <input class="form-control form-control-lg" type="text" name="phone" defaultValue={loggedInUser.phone} placeholder="Phone Number"  {...register("phone", { required: true })} />
+                          <input
+                            class="form-control form-control-lg"
+                            type="text"
+                            name="phone"
+                            defaultValue={loggedInUser.phone}
+                            placeholder="Phone Number *"
+                            {...register("phone", { required: true })}
+                          />
                           {errors.phone && <p className="error">Phone Number is required</p>}
                         </div>
                       </div>
                     </div>
-                    <div className="input-group mb-2">
-                      <input class="form-control form-control-lg" type="text" name="paymentMethod" placeholder="Payment Method"  {...register("paymentMethod", { required: true })} />
-                      {errors.paymentMethod &&  <p className="error">Payment Method is required</p>}
+
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">
+                        Payment Method *
+                        </label>
+                      </div>
+                      <select class="custom-select" id="inputGroupSelect01">
+                        <option selected>Choose...</option>
+                        <option value="1">bKash</option>
+                        <option value="2">Rocket</option>
+                        <option value="3">Nagad</option>
+                      </select>
                     </div>
+
+                    {/* <div className="input-group mb-2">
+                      <input
+                        class="form-control form-control-lg"
+                        type="text"
+                        name="paymentMethod"
+                        placeholder="Payment Method"
+                        {...register("paymentMethod", { required: true })}
+                      />
+                      {errors.paymentMethod && <p className="error">Payment Method is required</p>}
+                    </div> */}
                   </div>
                 </div>
-
 
                 <div className="col-lg-6">
                   <div className="card-body">
@@ -239,9 +289,9 @@ const CheckOut = () => {
                   <button>Check Out</button>
                 </Link>
               </div> */}
-              <input className="btn btn-success btn-lg btn-block mt-5 mb-2" type="submit" value="Check Out" />
+              <input className="btn btn-success btn-lg btn-block mt-3 mb-2" type="submit" value="Check Out" />
 
-              {/* <input onClick={handleCheckOut} className="btn btn-success btn-lg btn-block mt-5 mb-2" type="submit" value="Check Out" /> */}
+              {/* <input onClick={handleCheckOut} className="btn btn-success btn-lg btn-block mt-3 mb-2" type="submit" value="Check Out" /> */}
             </form>
           </div>
         </div>

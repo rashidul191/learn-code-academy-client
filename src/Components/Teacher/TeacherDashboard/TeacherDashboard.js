@@ -1,16 +1,15 @@
 import React, { useContext } from "react";
-import Footer from "../ShareFile/Footer/Footer";
-import Navbar from "../ShareFile/Navbar/Navbar";
-import "./UserDashboard.css";
-import UserNavbar from "./UserNavbar/UserNavbar";
-import userProfile from "../../Images/logo/profile-icon.png";
-import { UserContext } from "../../App";
+import { UserContext } from "../../../App";
+import Footer from "../../ShareFile/Footer/Footer";
+import Navbar from "../../ShareFile/Navbar/Navbar";
+import "./TeacherDashboard.css";
+import teacherProfile from '../../../Images/logo/profile-icon.png';
+import TeacherNavbar from "../TeacherNavbar/TeacherNavbar";
 
-const UserDashboard = () => {
-  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-
+const TeacherDashboard = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   return (
-    <section id="user-Dashboard">
+    <section id="teacher-Dashboard">
       <Navbar></Navbar>
       <div className="container pb-5">
         <div className="profile-bg-img">
@@ -18,13 +17,13 @@ const UserDashboard = () => {
             {loggedInUser.photo ? (
               <img className="user-profile img-fluid" src={loggedInUser.photo} alt="Image" />
             ) : (
-              <img className="user-profile img-fluid" src={userProfile} alt="User Images" />
+              <img className="user-profile img-fluid" src={teacherProfile} alt="User Images" />
             )}
             <h3 className="mt-3">{loggedInUser.name}</h3>
           </div>
         </div>
         <div>
-          <UserNavbar></UserNavbar>
+          <TeacherNavbar></TeacherNavbar>
         </div>
         <div>
           <h3 className="text-info display-4 py-4">Dashboard</h3>
@@ -85,4 +84,4 @@ const UserDashboard = () => {
   );
 };
 
-export default UserDashboard;
+export default TeacherDashboard;

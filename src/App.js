@@ -25,6 +25,10 @@ import UserNotification from "./Components/UserDashboard/UserNotification/UserNo
 import Instructor from "./Components/Instructor/Instructor";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import CoursesReview from "./Components/UserDashboard/CoursesReview/CoursesReview";
+import TeacherDashboard from "./Components/Teacher/TeacherDashboard/TeacherDashboard";
+import SellCourses from "./Components/Teacher/SellCourses/SellCourses";
+import TeacherNotification from "./Components/Teacher/TeacherNotification/TeacherNotification";
+import AddCourses from "./Components/Teacher/AddCourses/AddCourses";
 
 export const UserContext = createContext();
 function App() {
@@ -89,6 +93,7 @@ function App() {
             <UserNotification></UserNotification>
           </PrivateRoute> */}
 
+          {/* private route start here */}
           <Route path="/check-out">
             <CheckOut></CheckOut>
           </Route>
@@ -112,6 +117,22 @@ function App() {
           <Route path="/user-notifications">
             <UserNotification></UserNotification>
           </Route>
+
+          <Route path="/teacher-dashboard">
+            <TeacherDashboard></TeacherDashboard>
+          </Route>
+
+          <Route path="/sell-courses">
+            <SellCourses></SellCourses>
+          </Route>
+
+          <Route path="/teacher-notifications">
+            <TeacherNotification></TeacherNotification>
+          </Route>
+          <Route path="/add-courses">
+            <AddCourses></AddCourses>
+          </Route>
+          {/* private route start end */}
 
           <Route path="/about-us">
             <AboutUs></AboutUs>

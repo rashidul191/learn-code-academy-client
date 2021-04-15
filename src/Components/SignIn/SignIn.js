@@ -239,18 +239,18 @@ function SignIn() {
                     {newUser && (
                       <div className="newUser-form">
                         <div className="input-group-lg my-2">
-                          <input className="form-control " type="text" onBlur={handleBlur} name="name" placeholder="Full Name" required />
+                          <input className="form-control " type="text" onBlur={handleBlur} name="name" placeholder="Full Name *" required />
                         </div>
                         <div className="input-group-lg my-2">
-                          <input className="form-control " type="text" onBlur={handleBlur} name="address" placeholder="Address" required />
+                          <input className="form-control " type="text" onBlur={handleBlur} name="address" placeholder="Address *" required />
                         </div>
                       </div>
                     )}
                     <div className="input-group-lg my-2">
-                      <input className="form-control " type="email" onBlur={handleBlur} name="email" placeholder="email@example.com" required />
+                      <input className="form-control " type="email" onBlur={handleBlur} name="email" placeholder="email@example.com *" required />
                     </div>
                     <div className="input-group-lg my-2">
-                      <input className="form-control " type="password" onBlur={handleBlur} name="password" placeholder="Password" required />
+                      <input className="form-control " type="password" onBlur={handleBlur} name="password" placeholder="Password *" required />
                     </div>
 
                     {newUser && (
@@ -261,7 +261,7 @@ function SignIn() {
                             type="password"
                             onBlur={handleBlur}
                             name="password"
-                            placeholder="Conform Password"
+                            placeholder="Conform Password *"
                             required
                           />
                         </div>
@@ -269,7 +269,7 @@ function SignIn() {
                         <div className="row">
                           <div className="col-md-6 col-sm-12">
                             <div className="input-group-lg my-2">
-                              <input className="form-control " type="text" onBlur={handleBlur} name="zipCode" placeholder="Zip Code" required />
+                              <input className="form-control " type="text" onBlur={handleBlur} name="zipCode" placeholder="Zip Code *" required />
                             </div>
                           </div>
                           <div className="col-md-6 col-sm-12">
@@ -279,7 +279,7 @@ function SignIn() {
                                 type="text"
                                 onBlur={handleBlur}
                                 name="phone"
-                                placeholder="Phone Number"
+                                placeholder="Phone Number *"
                                 required
                               />
                             </div>
