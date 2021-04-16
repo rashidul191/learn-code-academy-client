@@ -47,10 +47,11 @@ const Navbar = () => {
                   Our Blogs
                 </Link>
               </li>
+             
 
               <li class="nav-item active ">
                 {loggedInUser.email ? (
-                  <div>                    
+                  <div>
                     <Link to="/user-dashboard">
                       <button className="btn btn-info mx-4">Daeshboard</button>
                     </Link>
@@ -68,6 +69,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+      
     </section>
   );
 };

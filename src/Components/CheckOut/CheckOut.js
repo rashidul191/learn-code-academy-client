@@ -140,17 +140,7 @@ const CheckOut = () => {
                         <option value="3">Nagad</option>
                       </select>
                     </div>
-
-                    {/* <div className="input-group mb-2">
-                      <input
-                        class="form-control form-control-lg"
-                        type="text"
-                        name="paymentMethod"
-                        placeholder="Payment Method"
-                        {...register("paymentMethod", { required: true })}
-                      />
-                      {errors.paymentMethod && <p className="error">Payment Method is required</p>}
-                    </div> */}
+                   
                   </div>
                 </div>
 
