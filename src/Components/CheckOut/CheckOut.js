@@ -8,17 +8,16 @@ import { useForm } from "react-hook-form";
 import { UserContext } from "../../App";
 
 const CheckOut = (props) => {
-  // cart add program
-  const cart = props.cart;
-  console.log(cart);
-  let total = 0;
-  for (let i = 0; i < cart.length; i++) {
-    const course = cart[i];
-    total = total + course.price;
-  }
-
-  // cart add program
-
+  // cart add program start
+  // const cart = props.cart;
+  // console.log(cart);
+  // let total = 0;
+  // for (let i = 0; i < cart.length; i++) {
+  //   const course = cart[i];
+  //   total = total + course.price;
+  // }
+  // cart add program end
+  
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
   const {
@@ -161,15 +160,19 @@ const CheckOut = (props) => {
                   <div className="card-body">
                     <h3 className="text-center text-primary">Cart Tables</h3>
                     <div>
-                      <h5>Items Ordered: {cart.length}</h5>
+                      {/* <h5>Items Ordered: {cart.length}</h5> */}
+                      <h5>Items Ordered: </h5>
+
                       <br />
-                      <h5>Total: {total}</h5>
+                      {/* <h5>Total: {total}</h5> */}
+                      <h5>Total: </h5>
+
                     </div>
                     <div className="row px-5">
-                      
-                        <h5>Total:</h5>
-                        <h5 className="ml-auto">$ {total}</h5>
-                     
+                      <h5>Total:</h5>
+                      {/* <h5 className="ml-auto">$ {total}</h5> */}
+                      <h5 className="ml-auto">$ 145</h5>
+
                     </div>
                     <hr />
                   </div>

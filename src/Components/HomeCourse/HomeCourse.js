@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./HomeCourse.css";
-import thumbale from "../../Images/thumbale.jpg";
 import { Link } from "react-router-dom";
 import fakeData from "../fakeData/fakeData";
 import AllCourses from "../AllCourses/AllCourses";
@@ -27,32 +26,7 @@ const [cart, setCart] = useState([]);
             <AllCourses showCourseCart={true} handleAddCourse={handleAddCourse} course={cs}></AllCourses>
           ))}
         </div>
-        {/* <div class="card-deck ">
-          <div class="card ">
-            <Link to="/courses-details">
-              <img src={thumbale} class="card-img-top" alt="img here" />
-            </Link>
-            <div class="card-body">
-              
-              <h5 class="card-title">Compleat Web Programming Course</h5>
-              
-              <hr />
-              <p>
-                Create By : <span>Rashidul Islam</span>
-                <br /> Enrolled : 191 Students
-                <br /> Lesson : 45
-                <br /> Students Retting 4.7 ⭐⭐⭐⭐⭐
-              </p>
-              <hr />
-              <div className="row mx-3">
-                <h4>$123.99</h4>
-                <Link className="ml-auto" to="/courses-details">
-                  <button className="btn btn-primary ml-auto">Enroll Now</button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div> */}
+       
 
         <div className="text-center pt-5">
           <Link to="/courses">

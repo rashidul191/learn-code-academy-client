@@ -16,7 +16,6 @@ import AboutUs from "./Components/AboutUs/AboutUs";
 import OurBlogDetails from "./Components/OurBlog/OurBlogDetails/OurBlogDetails";
 import PrivacyPolicy from "./Components/PrivacyPolicy/PrivacyPolicy";
 import TcConditeion from "./Components/TcConditeion/TcConditeion";
-import CoursesDetails from "./Components/HomeCourse/CoursesDetails/CoursesDetails";
 import CheckOut from "./Components/CheckOut/CheckOut";
 import UserDashboard from "./Components/UserDashboard/UserDashboard";
 import MyCourse from "./Components/UserDashboard/MyCourse/MyCourse";

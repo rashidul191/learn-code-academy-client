@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import DesignCourseDetails from "../HomeCourse/CoursesDetails/DesignCourseDetails/DesignCourseDetails";
 import "./AllCourses.css";
 
 const AllCourses = (props) => {
@@ -29,7 +28,7 @@ const AllCourses = (props) => {
   } = props.course;
 
   const history = useHistory();
-  const handleCheckOut = () => {
+  const handleBuyNowCourse = () => {
     history.push("/check-out");
   };
   return (
@@ -70,8 +69,8 @@ const AllCourses = (props) => {
               </div>
             </div>
           </div>
-          <div className="col-lg-4 col-md-12 card-body-Style"></div>
-          <div className="col-lg-4 col-md-12 card-body-Style"></div>
+          {/* <div className="col-lg-4 col-md-12 card-body-Style"></div>
+          <div className="col-lg-4 col-md-12 card-body-Style"></div> */}
         </div>
       )}
 
@@ -168,9 +167,9 @@ const AllCourses = (props) => {
               </div>
               <div>
                 {/* <button className=" btn btn-primary btn-block" onClick={handleCheckOut}>
-                Enroll Course
+                Buy Now Course
               </button> */}
-                <button className=" btn btn-primary btn-block">Enroll Course</button>
+                <button className=" btn btn-primary btn-block" onClick={handleBuyNowCourse}>Buy Now Course</button>
               </div>
               <div className="pt-3">
                 <table class="table">

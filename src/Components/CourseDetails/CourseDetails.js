@@ -10,8 +10,6 @@ const CourseDetails = () => {
   const { courseID } = useParams();
   const course = fakeData.find((cs) => cs.courseID === courseID);
 
-//   console.log(course);
-
  
   return (
     <section id="courses-Details">

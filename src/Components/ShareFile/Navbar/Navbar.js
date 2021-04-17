@@ -3,8 +3,17 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../../Images/logo/Logo.png";
 import { UserContext } from "../../../App";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
-const Navbar = () => {
+const Navbar = (props) => {
+  // const cart = props.cart;
+  // let total = 0;
+  // for (let i = 0; i < cart.length; i++) {
+  //   const course = cart[i];
+  //   total = total + course.price;
+  // }
+
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
   return (
@@ -43,10 +52,11 @@ const Navbar = () => {
                 </Link>
               </li>
               <li class="nav-item active mx-4">
-                <Link class="nav-link  link-style" to="/our-blogs">
+                <Link class="nav-link link-style" to="/our-blogs">
                   Our Blogs
                 </Link>
               </li>
+
              
 
               <li class="nav-item active ">
@@ -65,11 +75,16 @@ const Navbar = () => {
                   </Link>
                 )}
               </li>
+              {/* <li class="nav-item active mx-4">
+                <span class="nav-link link-style">
+                  <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon> {cart.length}
+                </span>
+              </li> */}
             </ul>
           </div>
         </div>
       </nav>
-      
+      <div></div>
     </section>
   );
 };
