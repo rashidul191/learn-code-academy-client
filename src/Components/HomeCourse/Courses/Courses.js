@@ -2,12 +2,8 @@ import React, { useState } from "react";
 import Footer from "../../ShareFile/Footer/Footer";
 import Navbar from "../../ShareFile/Navbar/Navbar";
 import "./Courses.css";
-import thumbale from "../../../Images/thumbale.jpg";
-import { Link } from "react-router-dom";
 import fakeData from "../../fakeData/fakeData";
-import { library } from "@fortawesome/fontawesome-svg-core";
 import AllCourses from "../../AllCourses/AllCourses";
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import CheckOut from "../../CheckOut/CheckOut";
 
 const Courses = () => {
@@ -30,7 +26,7 @@ const Courses = () => {
         <p className="lead">Home / Course</p>
       </div>
       <div>
-        <h3 className="text-center text-light bg-info display-4 mt-3 py-5">Courses</h3>
+        <h3 className="text-center text-light bg-info display-4 mt-3 py-5">All Courses</h3>
       </div>
 
       <div className="container  py-5">
@@ -45,7 +41,7 @@ const Courses = () => {
           )}
         </div>
       </div>
-      {/* cart demo */}
+      {/* add to cart demo */}
       <div>
         <h3>This is Cart</h3>
         <p>Order Summary: {cart.length}</p>
