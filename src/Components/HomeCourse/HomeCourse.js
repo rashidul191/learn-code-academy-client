@@ -14,9 +14,9 @@ const HomeCourse = () => {
                             <img src={thumbale} class="card-img-top" alt="img here" />
                         </Link>
                         <div class="card-body">
-                            <Link to="/courses-details">
+                            {/* <Link to="/courses-details"> */}
                                 <h5 class="card-title">Compleat Web Programming Course</h5>
-                            </Link>
+                            {/* </Link> */}
                             <hr />
                             <p>Create By : <span>Rashidul Islam</span>
                                 <br /> Enrolled : 191 Students

@@ -1,15 +1,22 @@
+
 .course-Body{
     border: 1px solid black;
+  
     
 }
 
 .course-Body-Style{
     padding: 15px;
+    
 }
 
 .course-Shipping{
     height: 500px;
     width: 100%;
     
+}
+
+.card-body-Style{
+    float: left;
 }
 

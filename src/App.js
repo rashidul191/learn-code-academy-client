@@ -29,6 +29,7 @@ import TeacherDashboard from "./Components/Teacher/TeacherDashboard/TeacherDashb
 import SellCourses from "./Components/Teacher/SellCourses/SellCourses";
 import TeacherNotification from "./Components/Teacher/TeacherNotification/TeacherNotification";
 import AddCourses from "./Components/Teacher/AddCourses/AddCourses";
+import CourseDetails from "./Components/CourseDetails/CourseDetails";
 
 export const UserContext = createContext();
 function App() {
@@ -56,8 +57,15 @@ function App() {
             <Courses></Courses>
           </Route>
 
-          <Route path="/courses-details">
+          
+
+          {/* <Route path="/courses-details">
             <CoursesDetails></CoursesDetails>
+          </Route> */}
+
+          {/* : = Dynamic value  course details */}
+          <Route path="/courses-details/:courseID">
+            <CourseDetails></CourseDetails>
           </Route>
 
           <Route path="/our-blogs">

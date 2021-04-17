@@ -7,7 +7,18 @@ import thumbnail from "../../Images/thumbale.jpg";
 import { useForm } from "react-hook-form";
 import { UserContext } from "../../App";
 
-const CheckOut = () => {
+const CheckOut = (props) => {
+  // cart add program
+  const cart = props.cart;
+  console.log(cart);
+  let total = 0;
+  for (let i = 0; i < cart.length; i++) {
+    const course = cart[i];
+    total = total + course.price;
+  }
+
+  // cart add program
+
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
   const {
@@ -23,6 +34,10 @@ const CheckOut = () => {
 
   const handleCheckOut = () => {
     history.push = "/purchase-history";
+
+    // const handleAddCourse = () =>{
+    //   console.log("add courses");
+    // }
   };
   return (
     <section id="check-Out">
@@ -61,7 +76,6 @@ const CheckOut = () => {
               <div className="row">
                 <div className="col-lg-6">
                   <div className="form-body mx-5">
-                    
                     <div className="input-group mb-2">
                       <input
                         class="form-control form-control-lg"
@@ -130,7 +144,7 @@ const CheckOut = () => {
                     <div class="input-group mb-3">
                       <div class="input-group-prepend">
                         <label class="input-group-text" for="inputGroupSelect01">
-                        Payment Method *
+                          Payment Method *
                         </label>
                       </div>
                       <select class="custom-select" id="inputGroupSelect01">
@@ -140,16 +154,22 @@ const CheckOut = () => {
                         <option value="3">Nagad</option>
                       </select>
                     </div>
-                   
                   </div>
                 </div>
 
                 <div className="col-lg-6">
                   <div className="card-body">
                     <h3 className="text-center text-primary">Cart Tables</h3>
+                    <div>
+                      <h5>Items Ordered: {cart.length}</h5>
+                      <br />
+                      <h5>Total: {total}</h5>
+                    </div>
                     <div className="row px-5">
-                      <h5>Total:</h5>
-                      <h5 className="ml-auto">$123.99</h5>
+                      
+                        <h5>Total:</h5>
+                        <h5 className="ml-auto">$ {total}</h5>
+                     
                     </div>
                     <hr />
                   </div>

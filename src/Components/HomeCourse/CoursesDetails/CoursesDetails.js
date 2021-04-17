@@ -6,6 +6,7 @@ import instractor from "../../../Images/Rashidul.jpg";
 import { Link, useHistory } from "react-router-dom";
 
 const CoursesDetails = () => {
+
   const history = useHistory();
   const handleCheckOut = () => {
     history.push("/check-out");
@@ -243,8 +244,6 @@ const CoursesDetails = () => {
               </div>
             </div>
           </div>
-
-         
         </div>
 
         {/* course content sction start*/}
