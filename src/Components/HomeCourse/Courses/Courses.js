@@ -45,7 +45,9 @@ const Courses = () => {
       <div>
         <h3>This is Cart</h3>
         <p>Order Summary: {cart.length}</p>
-        <CheckOut cart={cart}></CheckOut>
+
+        {/* <CheckOut cart={cart}></CheckOut> */}
+
       </div>
       <Footer></Footer>
     </section>
