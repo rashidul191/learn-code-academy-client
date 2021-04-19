@@ -17,7 +17,7 @@ const CheckOut = (props) => {
   //   total = total + course.price;
   // }
   // cart add program end
-  
+
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
   const {
@@ -30,13 +30,11 @@ const CheckOut = (props) => {
   };
 
   const history = useHistory();
-
   const handleCheckOut = () => {
-    history.push = "/purchase-history";
-
-    // const handleAddCourse = () =>{
-    //   console.log("add courses");
-    // }
+    console.log("click done.");
+    // alert(  );
+    history.push=("/purchase-history");
+  
   };
   return (
     <section id="check-Out">
@@ -148,7 +146,7 @@ const CheckOut = (props) => {
                         </label>
                       </div>
                       <select class="custom-select " id="inputGroupSelect01">
-                        <option  selected>Choose...</option>
+                        <option selected>Choose...</option>
                         <option value="1">bKash</option>
                         <option value="2">Rocket</option>
                         <option value="3">Nagad</option>
@@ -162,18 +160,16 @@ const CheckOut = (props) => {
                     <h3 className="text-center text-primary">Cart Tables</h3>
                     <div>
                       {/* <h5>Items Ordered: {cart.length}</h5> */}
-                      <h5>Items Ordered: </h5>
+                      {/* <h5>Items Ordered: </h5>
 
-                      <br />
+                      <br /> */}
                       {/* <h5>Total: {total}</h5> */}
-                      <h5>Total: </h5>
-
+                      {/* <h5>Total: </h5> */}
                     </div>
                     <div className="row px-5">
                       <h5>Total:</h5>
                       {/* <h5 className="ml-auto">$ {total}</h5> */}
                       <h5 className="ml-auto">$ 145</h5>
-
                     </div>
                     <hr />
                   </div>
@@ -303,9 +299,10 @@ const CheckOut = (props) => {
                   <button>Check Out</button>
                 </Link>
               </div> */}
-              <input className="btn btn-success btn-lg btn-block mt-3 mb-2" type="submit" value="Check Out" />
 
-              {/* <input onClick={handleCheckOut} className="btn btn-success btn-lg btn-block mt-3 mb-2" type="submit" value="Check Out" /> */}
+              {/* <input className="btn btn-success btn-lg btn-block mt-3 mb-2" type="submit" value="Check Out" /> */}
+
+              <input onClick={handleCheckOut} className="btn btn-success btn-lg btn-block mt-3 mb-2" type="submit" value="Check Out" />
             </form>
           </div>
         </div>

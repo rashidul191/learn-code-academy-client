@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 
 const TestHomeCourse = () => {
   return (
-    <section id="test-home-course">
-      <div className="container">
+    <section id="test-home-course" className="bg-light">
+      <div className="container ">
         <div className="py-5">
           <div>
             <h1 className="text-center text-primary">*** Courses ***</h1>
@@ -17,8 +17,10 @@ const TestHomeCourse = () => {
           <div className="row">
             <div className="col-lg-4 col-md-12 card py-3">
               <div>
-                <img className="img-fluid" src="https://i.ytimg.com/vi/d35dfSwBTNY/maxresdefault.jpg" alt="Course Img" />
-                <h3 className="pt-3">HTML Bangal Turorial </h3>
+                <Link to="/courses-details">
+                  <img className="img-fluid" src="https://i.ytimg.com/vi/d35dfSwBTNY/maxresdefault.jpg" alt="Course Img" />
+                  <h3 className="pt-3">HTML Bangal Turorial </h3>
+                </Link>
               </div>
               <hr />
               <div>

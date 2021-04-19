@@ -3,7 +3,7 @@ import './EnrollStudents.css';
 
 const EnrollStudents = () => {
     return (
-        <section id="enroll-Students">
+        <section id="enroll-Students" className="bg-light">
             <div className="container text-center">
                 <div className="row py-5">
                     <div className="col-lg-3 col-md-6">

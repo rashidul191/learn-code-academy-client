@@ -7,13 +7,13 @@ import "./TestCourseDetails.css";
 const TestCourseDetails = () => {
   return (
     <section>
-        <Navbar></Navbar>
+      <Navbar></Navbar>
       <div className="container">
         <div className="row">
           <div className="col-lg-8 col-md-7 my-4">
             <div className="row py-4 video-product-detaisl-body">
               <div className="col-lg-6 col-md-12 ">
-                <div className="video-iframe">              
+                <div className="video-iframe">
                   <iframe
                     width="320"
                     height="180"
@@ -176,7 +176,9 @@ const TestCourseDetails = () => {
               </div>
             </div>
             <p className="lead">
-            I like to call myself “a passionate computer science teacher”. I always had a wish on my mind that I will do something for the computer science students that’s why I made lots of videos on different subjects. My first priority is making the subject more interesting and clear so you can feel it and don’t get bore. ?
+              I like to call myself “a passionate computer science teacher”. I always had a wish on my mind that I will do something for the computer
+              science students that’s why I made lots of videos on different subjects. My first priority is making the subject more interesting and
+              clear so you can feel it and don’t get bore. ?
             </p>
           </div>
         </div>
