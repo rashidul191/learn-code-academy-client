@@ -58,10 +58,11 @@ const CheckOut = (props) => {
               <tr>
                 <th scope="row">1</th>
                 <td>
-                  <img className="img-fluid purchase-img-size" src={thumbnail} alt="" />
+                  {/* <img className="img-fluid purchase-img-size" src={thumbnail} alt="" /> */}
+                  <img className="img-fluid purchase-img-size" src="https://i.ytimg.com/vi/d35dfSwBTNY/maxresdefault.jpg" alt="" />
                 </td>
-                <td>Compleate web programming course</td>
-                <td>$129.99</td>
+                <td>HTML Bangal Turorial</td>
+                <td>৳ 199</td>
                 <td>*</td>
               </tr>
             </tbody>
@@ -146,8 +147,8 @@ const CheckOut = (props) => {
                           Payment Method *
                         </label>
                       </div>
-                      <select class="custom-select" id="inputGroupSelect01">
-                        <option selected>Choose...</option>
+                      <select class="custom-select " id="inputGroupSelect01">
+                        <option  selected>Choose...</option>
                         <option value="1">bKash</option>
                         <option value="2">Rocket</option>
                         <option value="3">Nagad</option>

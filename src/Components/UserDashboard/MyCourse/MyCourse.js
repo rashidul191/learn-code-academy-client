@@ -75,36 +75,40 @@ const MyCourse = () => {
         <div>
           <h3 className="text-info display-4 py-3">Enrolled Courses</h3>
         </div>
-        <div className="row">
+
+
+         <div className="row">
           <div className="col-lg-4 col-md-6">
             <Link to="/lesson">
-              <img className="img-fluid" src={thumbale} alt="" />
+              <img className="img-fluid" src="https://i.ytimg.com/vi/d35dfSwBTNY/maxresdefault.jpg" alt="" />
             </Link>
             <div class="course-Body-Style">
               <Link to="/lesson">
-                <h5 class="">Compleat Web Programming Course</h5>
+                <h5 class="">HTML Bangal Turorial</h5>
               </Link>
               <hr />
               <p>
-                Create By : <span>Rashidul Islam</span>
-                <br /> Enrolled : 191 Students
-                <br /> Lesson : 45
+                Create By : <span>Anisul Islam</span>
+                <br /> Enrolled : 99 Students
+                <br /> Lesson : 50
                 <br /> Students Retting 4.7 ⭐⭐⭐⭐⭐
               </p>
               <hr />
               <div className="row">
-                <Link to="/lesson" className="">
+                {/* <Link to="/lesson" className="">
                   <button className="btn btn-success mr-3">Go To Lesson</button>
                 </Link>
                 <Link to="/course-review" className="">
                   <button className="btn btn-success ml-3 ">Go To Review</button>
-                </Link>
+                </Link> */}
+                 <a target="_blank" href="https://www.youtube.com/playlist?list=PLgH5QX0i9K3oHBr5dsumGwjUxByN5Lnw3" className="">
+                  <button className="btn btn-success mr-3">Go To Lesson</button>
+                </a>
               </div>
             </div>
           </div>
-          <div className="col-lg-4 col-md-6"></div>
-          <div className="col-lg-4 col-md-6"></div>
-        </div>
+       
+        </div> 
       </div>
       <Footer></Footer>
     </section>

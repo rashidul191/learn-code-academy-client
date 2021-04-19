@@ -29,6 +29,8 @@ import SellCourses from "./Components/Teacher/SellCourses/SellCourses";
 import TeacherNotification from "./Components/Teacher/TeacherNotification/TeacherNotification";
 import AddCourses from "./Components/Teacher/AddCourses/AddCourses";
 import CourseDetails from "./Components/CourseDetails/CourseDetails";
+import TestCourse from "./Components/HomeCourse/TestHomeCourse/TestCourse/TestCourse";
+import TestCourseDetails from "./Components/HomeCourse/TestHomeCourse/TestCourse/TestCourseDetails/TestCourseDetails";
 
 export const UserContext = createContext();
 function App() {
@@ -53,18 +55,21 @@ function App() {
           </Route>
 
           <Route path="/courses">
-            <Courses></Courses>
+            {/* <Courses></Courses> */}
+            <TestCourse></TestCourse>
           </Route>
-
-          
 
           {/* <Route path="/courses-details">
             <CoursesDetails></CoursesDetails>
           </Route> */}
 
           {/* : = Dynamic value  course details */}
-          <Route path="/courses-details/:courseID">
+          {/* <Route path="/courses-details/:courseID">
             <CourseDetails></CourseDetails>
+          </Route> */}
+
+          <Route path="/courses-details">
+            <TestCourseDetails></TestCourseDetails>
           </Route>
 
           <Route path="/our-blogs">

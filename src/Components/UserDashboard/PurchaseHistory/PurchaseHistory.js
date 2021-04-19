@@ -75,6 +75,8 @@ const PurchaseHistory = () => {
           <h3 className="text-info display-4 py-4">Purchase History</h3>
         </div>
         <div>
+
+
           <table class="table ">
             <thead>
               <tr>
@@ -86,7 +88,7 @@ const PurchaseHistory = () => {
               </tr>
             </thead>
             <tbody>
-              <tr>
+              {/* <tr>
                 <th scope="row">1</th>
                 <td>
                   <img className="img-fluid purchase-img-size" src={thumbale} alt="Images" />
@@ -94,6 +96,16 @@ const PurchaseHistory = () => {
                 <td>Compleate Web programming Course</td>
                 <td>$123.99</td>
                 <td className="btn btn-danger">Pendding</td>
+              </tr> */}
+
+               <tr>
+                <th scope="row">1</th>
+                <td>
+                  <img className="img-fluid purchase-img-size" src="https://i.ytimg.com/vi/d35dfSwBTNY/maxresdefault.jpg" alt="Images" />
+                </td>
+                <td>HTML Bangal Turorial</td>
+                <td>৳ 199</td>
+                <td className="btn btn-success">DONE</td>
               </tr>
             </tbody>
           </table>
