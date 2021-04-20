@@ -17,15 +17,17 @@ const TestCourse = () => {
         <hr />
       </div>
       <div>
-        <h3 className="text-center text-light bg-info display-4 mt-3 py-5"> Course</h3>
+        <h3 className="text-center text-light bg-info display-4 mt-3 py-5">Course</h3>
       </div>
       <div className="container">
         <div className="py-5">
           <div className="row ">
             <div className="col-lg-4 col-md-12 card py-3">
               <div>
-                <img className="img-fluid" src="https://i.ytimg.com/vi/d35dfSwBTNY/maxresdefault.jpg" alt="Course Img" />
-                <h3 className="pt-3">HTML Bangal Turorial </h3>
+                <Link to="/courses-details">
+                  <img className="img-fluid" src="https://i.ytimg.com/vi/d35dfSwBTNY/maxresdefault.jpg" alt="Course Img" />
+                  <h3 className="pt-3">HTML Bangal Turorial </h3>
+                </Link>
               </div>
               <hr />
               <div>
