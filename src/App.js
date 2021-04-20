@@ -107,9 +107,10 @@ function App() {
             <UserNotification></UserNotification>
           </PrivateRoute>
 
-          <Route path="/lesson">
+          <PrivateRoute path="/lesson">
             <Lesson></Lesson>
-          </Route>
+          </PrivateRoute>
+          
           {/* private route start here */}
 
           {/* <Route path="/check-out">
