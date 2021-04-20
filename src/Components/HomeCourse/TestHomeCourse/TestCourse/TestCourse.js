@@ -13,11 +13,14 @@ const TestCourse = () => {
     <section id="test-Course">
       <Navbar></Navbar>
       <div className="container">
+        <p className="lead pt-3">Home / Course</p>
+        <hr />
+      </div>
+      <div>
+        <h3 className="text-center text-light bg-info display-4 mt-3 py-5"> Course</h3>
+      </div>
+      <div className="container">
         <div className="py-5">
-          <div>
-            <h1 className="text-center">*** Course ***</h1>
-          </div>
-
           <div className="row ">
             <div className="col-lg-4 col-md-12 card py-3">
               <div>
@@ -61,15 +64,15 @@ const TestCourse = () => {
                     <h1>৳ 199</h1>
                   </div>
                   <div className="ml-auto">
-                      <Link to="/courses-details">
+                    <Link to="/courses-details">
                       <button className="btn btn-success btn-lg">Enroll Now</button>
-                      </Link>
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
             <div className="col-lg-8 col-md-12 py-3">
-            <div className="row">
+              <div className="row">
                 <div className="col-lg-6 col-md-6">
                   <ul>
                     <li>
