@@ -4,10 +4,10 @@ import Navbar from "../../ShareFile/Navbar/Navbar";
 import userProfile from "../../../Images/logo/profile-icon.png";
 import "./PurchaseHistory.css";
 import { Link } from "react-router-dom";
-import thumbale from "../../../Images/thumbale.jpg";
 import { UserContext } from "../../../App";
 
 const PurchaseHistory = () => {
+  document.title = "LCA | Purchase History";
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   return (
     <section id="purchase-History">
@@ -75,8 +75,6 @@ const PurchaseHistory = () => {
           <h3 className="text-info display-4 py-4">Purchase History</h3>
         </div>
         <div>
-
-
           <table class="table ">
             <thead>
               <tr>

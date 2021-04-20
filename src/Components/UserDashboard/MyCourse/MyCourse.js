@@ -8,6 +8,7 @@ import "./MyCourse.css";
 import { UserContext } from "../../../App";
 
 const MyCourse = () => {
+  document.title = "LCA | My Course";
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   return (
     <section>

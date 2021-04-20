@@ -18,6 +18,7 @@ import { useHistory, useLocation } from "react-router";
 firebase.initializeApp(firebaseConfig);
 
 function SignIn() {
+  document.title = "LCA | Sign In";
   // const {
   //   register,
   //   formState: { errors },

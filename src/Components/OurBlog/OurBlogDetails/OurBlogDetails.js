@@ -5,6 +5,7 @@ import './OurBlogDetails.css';
 import blogerImg from '../../../Images/Rashidul.jpg';
 
 const OurBlogDetails = () => {
+    document.title = "LCA | Our Blogs";
     return (
         <section>
             <Navbar></Navbar>

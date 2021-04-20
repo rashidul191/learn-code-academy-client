@@ -4,6 +4,7 @@ import Navbar from '../ShareFile/Navbar/Navbar';
 import './TcConditeion.css';
 
 const TcConditeion = () => {
+    document.title = "LCA | Terms of Service";
     return (
         <section>
             <Navbar></Navbar>

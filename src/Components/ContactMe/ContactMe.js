@@ -4,11 +4,12 @@ import Navbar from "../ShareFile/Navbar/Navbar";
 import "./ContactMe.css";
 
 const ContactMe = () => {
+  document.title = "LCA | Contact Us";
   return (
     <section id="Contact-Me">
       <Navbar></Navbar>
       <div className="container mt-3">
-        <p className="lead">Home / Contact us</p>
+        <p className="lead">Home / Contact Us</p>
       </div>
       <h3 className="bg-info display-4 mt-3 py-5 text-center text-light">Contact Us</h3>
       <div className="container">

@@ -27,7 +27,6 @@ const OurBlog = () => {
                   <p className="ml-3">Date: Nov 4,2020</p>
                 </div>
               </div>
-
               <hr />
             </div>
           </div>

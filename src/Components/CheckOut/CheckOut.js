@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import { UserContext } from "../../App";
 
 const CheckOut = (props) => {
+  document.title = "LCA | Check Out";
   // cart add program start
   // const cart = props.cart;
   // console.log(cart);

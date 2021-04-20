@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { UserContext } from '../../../App';
 
 const UserNotification = () => {
+    document.title = "LCA | Notification";
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
         <section>

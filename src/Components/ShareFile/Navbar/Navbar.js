@@ -43,7 +43,7 @@ const Navbar = (props) => {
               </li>
               <li class="nav-item active mx-4">
                 <Link class="nav-link link-style" to="/courses">
-                  Courses
+                  Course
                 </Link>
               </li>
               <li class="nav-item active mx-4">

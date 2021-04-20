@@ -8,13 +8,14 @@ import Footer from "../../../ShareFile/Footer/Footer";
 import { Link } from "react-router-dom";
 
 const TestCourse = () => {
+  document.title = "LCA | Course";
   return (
     <section id="test-Course">
       <Navbar></Navbar>
       <div className="container">
         <div className="py-5">
           <div>
-            <h1 className="text-center">*** Courses ***</h1>
+            <h1 className="text-center">*** Course ***</h1>
           </div>
 
           <div className="row ">

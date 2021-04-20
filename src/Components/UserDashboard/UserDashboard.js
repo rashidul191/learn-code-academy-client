@@ -7,6 +7,7 @@ import userProfile from "../../Images/logo/profile-icon.png";
 import { UserContext } from "../../App";
 
 const UserDashboard = () => {
+  document.title = "LCA | Dashboard";
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
   return (

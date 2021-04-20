@@ -12,6 +12,7 @@ import Header from './Header/Header';
 import './Home.css';
 
 const Home = () => {
+    document.title = "Learn Code Academy";
     
     return (
         <section id="home">

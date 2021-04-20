@@ -5,9 +5,14 @@ import Navbar from "../../../../ShareFile/Navbar/Navbar";
 import "./TestCourseDetails.css";
 
 const TestCourseDetails = () => {
+  document.title = "LCA | Course Details";
   return (
     <section>
       <Navbar></Navbar>
+      <div className="container">
+        <p className="lead pt-3">Home / Course / Course Details</p>
+        <hr />
+      </div>
       <div className="container">
         <div className="row">
           <div className="col-lg-8 col-md-7 my-4">
