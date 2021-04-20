@@ -29,7 +29,7 @@ const CheckOut = (props) => {
   const onSubmit = (data) => {
     console.log("form submit done", data);
 
-    fetch('http://localhost:5000/paymentMethod',{
+    fetch('https://vast-atoll-65684.herokuapp.com/paymentMethod',{
       method:'POST',
       headers:{'content-type':'application/json'},
       body: JSON.stringify(data)

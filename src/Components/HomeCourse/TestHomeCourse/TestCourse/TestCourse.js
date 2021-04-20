@@ -21,7 +21,7 @@ const TestCourse = () => {
       <div className="container">
         <div className="py-5">
           <div className="row ">
-            <div className="col-lg-4 col-md-12 card py-3">
+            <div className="col-lg-4 col-sm-12 card py-3">
               <div>
                 <Link to="/courses-details">
                   <img className="img-fluid" src="https://i.ytimg.com/vi/d35dfSwBTNY/maxresdefault.jpg" alt="Course Img" />
@@ -31,17 +31,17 @@ const TestCourse = () => {
               <hr />
               <div>
                 <div className="row text-center">
-                  <div className="col-md-4 ">
+                  <div className="col-sm-4 ">
                     <img src={icon_1} alt="icon" />
                     <h3>3</h3>
                     <p>Month Required</p>
                   </div>
-                  <div className="col-md-4">
+                  <div className="col-sm-4">
                     <img src={icon_2} alt="icon" />
                     <h3>9999</h3>
                     <p>Enrolled</p>
                   </div>
-                  <div className="col-md-4">
+                  <div className="col-sm-4">
                     <img src={icon_3} alt="icon" />
                     <h3>Yes</h3>
                     <p>Certificate</p>
@@ -49,13 +49,13 @@ const TestCourse = () => {
                 </div>
                 <hr />
                 <div className="row text-center">
-                  <div className="col-md-4">
+                  <div className="col-sm-4">
                     <small>50 Videos</small>
                   </div>
-                  <div className="col-md-4 ">
+                  <div className="col-sm-4 ">
                     <small>10 Quizes</small>
                   </div>
-                  <div className="col-md-4 ">
+                  <div className="col-sm-4 ">
                     <small>2 Assignment</small>
                   </div>
                 </div>
@@ -72,9 +72,9 @@ const TestCourse = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-8 col-md-12 py-3">
+            <div className="col-lg-8 col-sm-12 py-3">
               <div className="row">
-                <div className="col-lg-6 col-md-6">
+                <div className="col-lg-6 col-sm-6">
                   <ul>
                     <li>
                       ফটাফট কয়েকটা ভিডিও দেখে HTML, CSS শিখে ফটাফট চমৎকার দুইটা ওয়েবসাইট বানিয়ে ফেলবে। এবং সেগুলার লিংক যেকারো সাথে শেয়ার করে ভাব
@@ -100,7 +100,7 @@ const TestCourse = () => {
                   </ul>
                 </div>
 
-                <div className="col-lg-6 col-md-6">
+                <div className="col-lg-6 col-sm-6">
                   <ul>
                     <li>
                       বুটস্ট্রাপ (bootstrap) নামক পপুলার ফ্রেমওয়ার্ক এর খুঁটিনাটি ভাজা ভাজা করে ফেলবে। তারপর সেটা দিয়েও দুইটা ই-কমার্স ওয়েবসাইট বানিয়ে

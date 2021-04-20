@@ -11,7 +11,7 @@ const TestHomeCourse = () => {
       <div className="container ">
         <div className="py-5">
           <div>
-            <h1 className="text-center text-primary">*** Courses ***</h1>
+            <h1 className="text-center text-primary">*** Course ***</h1>
           </div>
 
           <div className="row">
@@ -25,17 +25,17 @@ const TestHomeCourse = () => {
               <hr />
               <div>
                 <div className="row text-center">
-                  <div className="col-md-4 ">
+                  <div className="   col-sm-4 ">
                     <img src={icon_1} alt="icon" />
                     <h3>3</h3>
                     <p>Month Required</p>
                   </div>
-                  <div className="col-md-4">
+                  <div className=" col-sm-4">
                     <img src={icon_2} alt="icon" />
                     <h3>9999</h3>
                     <p>Enrolled</p>
                   </div>
-                  <div className="col-md-4">
+                  <div className=" col-sm-4">
                     <img src={icon_3} alt="icon" />
                     <h3>Yes</h3>
                     <p>Certificate</p>
@@ -43,13 +43,13 @@ const TestHomeCourse = () => {
                 </div>
                 <hr />
                 <div className="row text-center">
-                  <div className="col-md-4">
+                  <div className="col-sm-4 ">
                     <small>50 Videos</small>
                   </div>
-                  <div className="col-md-4 ">
+                  <div className="col-sm-4  ">
                     <small>10 Quizes</small>
                   </div>
-                  <div className="col-md-4 ">
+                  <div className="col-sm-4  ">
                     <small>2 Assignment</small>
                   </div>
                 </div>

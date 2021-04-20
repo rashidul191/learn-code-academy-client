@@ -12,7 +12,7 @@ const OurBlog = () => {
           <div className="col-lg-4 col-md-6">
             <div>
               <a className="" target="_blank" href="https://rashidul-191cse-gub.medium.com/react-js-some-concepts-method-discretion-adc98b3433e5">
-                <img className="img-fluid" src="https://miro.medium.com/max/402/1*CHyFATmXWkMOSEOVhzD5Cw.jpeg" alt="Image" />
+                <img className="img-fluid" src="https://i.imgur.com/saKMUYF.jpg" alt="Image" />
                 <h5 className="mt-2">React.js some concepts metohd descreteion.</h5>
               </a>
               <hr />
