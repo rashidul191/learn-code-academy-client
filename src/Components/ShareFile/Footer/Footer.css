@@ -17,9 +17,8 @@ li Link{
 li Link:hover{
     color: white;
 }
-.icon-size{
-    height: 600px;
-    width: 600px;
+.socail-icon{
+    font-size: 30px;
 }
 
 span Link{

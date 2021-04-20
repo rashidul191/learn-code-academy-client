@@ -20,30 +20,30 @@ const Footer = () => {
               </Link>
               <div className="pt-4">
                 <p>
-                  {" "}
-                  <FontAwesomeIcon icon={faEnvelopeSquare}></FontAwesomeIcon> Official: lca@gmail.com <br />
-                  <FontAwesomeIcon icon={faPhoneSquareAlt}></FontAwesomeIcon> Helpline: 0123456789 <br /> (Available: 09:00am to 11:00pm)
+                  
+                  <FontAwesomeIcon className="socail-icon" icon={faEnvelopeSquare}></FontAwesomeIcon> Official: lca@gmail.com <br />
+                  <FontAwesomeIcon className="socail-icon" icon={faPhoneSquareAlt}></FontAwesomeIcon> Helpline: 0123456789 <br /> (Available: 09:00am to 11:00pm)
                 </p>
               </div>
               <div>
                 <span className="pr-2">
                   <a target="_blank" href="https://www.facebook.com/groups/learncodeacademy">
-                    <FontAwesomeIcon icon={faFacebookSquare} />
+                    <FontAwesomeIcon className="socail-icon" icon={faFacebookSquare} />
                   </a>
                 </span>
                 <span className="p-2">
                   <a target="_blank" href="https://www.linkedin.com/in/rashidul191/">
-                    <FontAwesomeIcon icon={faLinkedin} />
+                    <FontAwesomeIcon className="socail-icon" icon={faLinkedin} />
                   </a>
                 </span>
                 <span className="p-2">
                   <a target="_blank" href="https://twitter.com/Rashidul191">
-                    <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
+                    <FontAwesomeIcon className="socail-icon" icon={faTwitter}></FontAwesomeIcon>
                   </a>
                 </span>
                 <span className="pl-2">
                   <a target="_blank" href="https://www.instagram.com/rashidul191.r/">
-                    <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
+                    <FontAwesomeIcon className="socail-icon" icon={faInstagram}></FontAwesomeIcon>
                   </a>
                 </span>
               </div>

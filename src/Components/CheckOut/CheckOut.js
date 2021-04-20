@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import Footer from "../ShareFile/Footer/Footer";
 import Navbar from "../ShareFile/Navbar/Navbar";
 import "./CheckOut.css";
-import thumbnail from "../../Images/thumbale.jpg";
 import { useForm } from "react-hook-form";
 import { UserContext } from "../../App";
 
@@ -19,23 +18,31 @@ const CheckOut = (props) => {
   // cart add program end
 
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-
+  const history = useHistory();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+
   const onSubmit = (data) => {
-    console.log(data);
+    console.log("form submit done", data);
+
+    fetch('http://localhost:5000/paymentMethod',{
+      method:'POST',
+      headers:{'content-type':'application/json'},
+      body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(success => {
+      if(success){
+        history.push ("/purchase-history");
+        alert("Your Purchase Check Out Successfully.");
+      }
+    })
+    
   };
 
-  const history = useHistory();
-  const handleCheckOut = () => {
-    console.log("click done.");
-    // alert(  );
-    history.push=("/purchase-history");
-  
-  };
   return (
     <section id="check-Out">
       <Navbar></Navbar>
@@ -74,7 +81,18 @@ const CheckOut = (props) => {
               <div className="row">
                 <div className="col-lg-6">
                   <div className="form-body mx-5">
-                    <div className="input-group mb-2">
+                  <div className="input-group mb-2">                      
+                      <input
+                        class="form-control form-control-lg"
+                        type="date"
+                        name="date"
+                        defaultValue={new Date()}
+                        // placeholder={new Date()}
+                        {...register("date", { required: true })}
+                      />
+                      {errors.date && <p className="error">Date is required</p>}
+                    </div>
+                    <div className="input-group mb-2">                      
                       <input
                         class="form-control form-control-lg"
                         type="text"
@@ -140,17 +158,27 @@ const CheckOut = (props) => {
                     </div>
 
                     <div class="input-group mb-3">
-                      <div class="input-group-prepend">
+                      <div className="input-group mb-2">
+                        <input
+                          class="form-control form-control-lg"
+                          type="text"
+                          name="paymentMetoh"
+                          placeholder="Payment Metoh *"
+                          {...register("paymentMetoh", { required: true })}
+                        />
+                        {errors.paymentMetoh && <p className="error">Payment Metoh is required</p>}
+                      </div>
+                      {/* <div class="input-group-prepend">
                         <label class="input-group-text" for="inputGroupSelect01">
                           Payment Method *
                         </label>
-                      </div>
-                      <select class="custom-select " id="inputGroupSelect01">
-                        <option selected>Choose...</option>
+                      </div> */}
+                      {/* <select class="custom-select " id="inputGroupSelect01">
+                        <option selected>Choose Option</option>
                         <option value="1">bKash</option>
                         <option value="2">Rocket</option>
                         <option value="3">Nagad</option>
-                      </select>
+                      </select> */}
                     </div>
                   </div>
                 </div>
@@ -169,7 +197,7 @@ const CheckOut = (props) => {
                     <div className="row px-5">
                       <h5>Total:</h5>
                       {/* <h5 className="ml-auto">$ {total}</h5> */}
-                      <h5 className="ml-auto">$ 145</h5>
+                      <h5 className="ml-auto">$ 199</h5>
                     </div>
                     <hr />
                   </div>
@@ -211,15 +239,35 @@ const CheckOut = (props) => {
                               <hr />
                             </div>
                             <div class="input-group mb-2">
-                              <input type="text" class="form-control" placeholder="bKash Number" aria-label="Dollar amount " />
+                              {/* <input type="text" class="form-control" placeholder="bKash Number" aria-label="Dollar amount " /> */}
+                              <div className="input-group mb-2">
+                                <input
+                                  class="form-control form-control-lg"
+                                  type="text"
+                                  name="bkashNumber"
+                                  placeholder="bKash Number*"
+                                  {...register("bkashNumber", { required: true })}
+                                />
+                                {errors.bkashNumber && <p className="error">bKash Number is required</p>}
+                              </div>
                             </div>
                             <div class="input-group">
-                              <input type="text" class="form-control" placeholder="bKash Transaction ID" aria-label="Dollar amount " />
+                              {/* <input type="text" class="form-control" placeholder="bKash Transaction ID" aria-label="Dollar amount " /> */}
+                              <div className="input-group mb-2">
+                                <input
+                                  class="form-control form-control-lg"
+                                  type="text"
+                                  name="bkashTrID"
+                                  placeholder="bKash Transaction ID *"
+                                  {...register("bkashTrID", { required: true })}
+                                />
+                                {errors.bkashTrID && <p className="error">bKash Transaction ID is required</p>}
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div class="">
+                      {/* <div class="">
                         <div class="card-header" id="headingTwo">
                           <input
                             type="radio"
@@ -253,8 +301,8 @@ const CheckOut = (props) => {
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="">
+                      </div> */}
+                      {/* <div class="">
                         <div class="card-header" id="headingThree">
                           <input
                             type="radio"
@@ -288,7 +336,7 @@ const CheckOut = (props) => {
                             </div>
                           </div>
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
@@ -302,7 +350,7 @@ const CheckOut = (props) => {
 
               {/* <input className="btn btn-success btn-lg btn-block mt-3 mb-2" type="submit" value="Check Out" /> */}
 
-              <input onClick={handleCheckOut} className="btn btn-success btn-lg btn-block mt-3 mb-2" type="submit" value="Check Out" />
+              <input className="btn btn-success btn-lg btn-block mt-3 mb-2" type="submit" value="Check Out" />
             </form>
           </div>
         </div>

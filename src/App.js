@@ -81,7 +81,8 @@ function App() {
           </Route>
 
           {/* private route start here */}
-          {/* <PrivateRoute path="/check-out">
+
+           <PrivateRoute path="/check-out">
             <CheckOut></CheckOut>
           </PrivateRoute>
 
@@ -93,9 +94,9 @@ function App() {
             <MyCourse></MyCourse>
           </PrivateRoute>
 
-          <PrivateRoute path="/course-review">
+          {/* <PrivateRoute path="/course-review">
             <CoursesReview></CoursesReview>
-          </PrivateRoute>
+          </PrivateRoute> */}
 
           <PrivateRoute path="/purchase-history">
             <PurchaseHistory></PurchaseHistory>
@@ -103,10 +104,11 @@ function App() {
 
           <PrivateRoute path="/user-notifications">
             <UserNotification></UserNotification>
-          </PrivateRoute> */}
+          </PrivateRoute> 
 
           {/* private route start here */}
-          <Route path="/check-out">
+          
+          {/* <Route path="/check-out">
             <CheckOut></CheckOut>
           </Route>
 
@@ -141,9 +143,11 @@ function App() {
           <Route path="/teacher-notifications">
             <TeacherNotification></TeacherNotification>
           </Route>
+
           <Route path="/add-courses">
             <AddCourses></AddCourses>
           </Route>
+           */}
           {/* private route start end */}
 
           <Route path="/about-us">

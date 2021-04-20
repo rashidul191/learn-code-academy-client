@@ -7,11 +7,9 @@ import AllCourses from "../AllCourses/AllCourses";
 const HomeCourse = () => {
   const first6 = fakeData.slice(0, 3);
   const [courseFirst6, setCourseFirst6] = useState(first6);
-
   const [cart, setCart] = useState([]);
   const handleAddCourse = (courseHandle) => {
-    console.log("add courses", courseHandle);
-
+    // console.log("add courses", courseHandle);
     const newCart = [...cart, courseHandle];
     setCart(newCart);
   };
