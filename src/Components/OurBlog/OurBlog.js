@@ -19,8 +19,8 @@ const OurBlog = () => {
             </div>
             <div>
               <div className="row">
-                  <div>
-                <img className="ml-3 img-fluid booger-Img" src={blogerImg} alt="Image" />
+                <div>
+                  <img className="ml-3 img-fluid booger-Img" src={blogerImg} alt="Image" />
                 </div>
                 <div>
                   <h6 className="ml-3 mt-2">Md Rashidul Islam</h6>
@@ -34,9 +34,11 @@ const OurBlog = () => {
           <div className="col-lg-4 col-md-6"></div>
           <div className="col-lg-4 col-md-6"></div>
         </div>
-        <Link to="/our-blogs">
-          <button className="btn btn-lg btn-success mt-4">Learn More</button>
-        </Link>
+        <div className="text-center">
+          <Link to="/our-blogs">
+            <button className="btn btn-lg btn-success mt-4">Learn More</button>
+          </Link>
+        </div>
       </div>
     </section>
   );

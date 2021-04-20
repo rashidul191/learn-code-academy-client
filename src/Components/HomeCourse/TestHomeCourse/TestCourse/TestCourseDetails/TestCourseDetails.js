@@ -30,7 +30,7 @@ const TestCourseDetails = () => {
                 <hr />
                 <p>
                   Create By : <span>Anisul Islam</span>
-                  <br /> Enrolled : 99 Students
+                  <br /> Enrolled : 9999 Students
                   <br /> Lesson : 50
                   <br /> Students Retting 4.7 ⭐⭐⭐⭐⭐
                 </p>
@@ -123,7 +123,7 @@ const TestCourseDetails = () => {
                   </tr>
                   <tr>
                     <th scope="row">Videos:</th>
-                    <td>5</td>
+                    <td>50</td>
                   </tr>
                   <tr>
                     <th scope="row">Duration:</th>

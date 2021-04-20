@@ -55,7 +55,7 @@ const UserDashboard = () => {
                   </tr>
 
                   <tr>
-                    <td scope="row">Phone Number: </td>
+                    <td scope="row">Zip Code: </td>
                     <th> {loggedInUser.zipCode}</th>
                   </tr>
 

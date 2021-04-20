@@ -89,7 +89,7 @@ const MyCourse = () => {
               <hr />
               <p>
                 Create By : <span>Anisul Islam</span>
-                <br /> Enrolled : 99 Students
+                <br /> Enrolled : 9999 Students
                 <br /> Lesson : 50
                 <br /> Students Retting 4.7 ⭐⭐⭐⭐⭐
               </p>
