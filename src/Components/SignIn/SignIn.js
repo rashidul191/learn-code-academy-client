@@ -238,7 +238,7 @@ function SignIn() {
                   {/* google login information  here */}
                   <form onSubmit={handleSubmit} action="">
                     {newUser && (
-                      <div className="newUser-form">
+                      <div className="newUser-form">                       
                         <div className="input-group-lg my-2">
                           <input className="form-control " type="text" onBlur={handleBlur} name="name" placeholder="Full Name *" required />
                         </div>
@@ -279,7 +279,7 @@ function SignIn() {
                                 className="form-control "
                                 type="text"
                                 onBlur={handleBlur}
-                                name="phone"
+                                name="phoneNumber"
                                 placeholder="Phone Number *"
                                 required
                               />
@@ -409,7 +409,9 @@ function SignIn() {
                       <div onClick={handleFBSignIn} className="">
                         <div className="row mx-5 mt-1">
                           <img className="img-fluid socail-icon-size" src={facebookSignInImg} alt="" />
-                          <label className="ml-auto" htmlFor="">Sign In with Facebook</label>
+                          <label className="ml-auto" htmlFor="">
+                            Sign In with Facebook
+                          </label>
                         </div>
                       </div>
                     </div>

@@ -148,12 +148,12 @@ const CheckOut = (props) => {
                           <input
                             class="form-control form-control-lg"
                             type="text"
-                            name="phone"
-                            defaultValue={loggedInUser.phone}
+                            name="phoneNumber"
+                            defaultValue={loggedInUser.phoneNumber}
                             placeholder="Phone Number *"
-                            {...register("phone", { required: true })}
+                            {...register("phoneNumber", { required: true })}
                           />
-                          {errors.phone && <p className="error">Phone Number is required</p>}
+                          {errors.phoneNumber && <p className="error">Phone Number is required</p>}
                         </div>
                       </div>
                     </div>
