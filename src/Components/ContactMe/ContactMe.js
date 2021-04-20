@@ -1,10 +1,27 @@
 import React from "react";
+import { useForm } from "react-hook-form";
+import { useHistory } from "react-router";
 import Footer from "../ShareFile/Footer/Footer";
 import Navbar from "../ShareFile/Navbar/Navbar";
 import "./ContactMe.css";
 
 const ContactMe = () => {
   document.title = "LCA | Contact Us";
+
+  const history = useHistory();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log("contact us  form submit done", data);
+
+    history.push("/");
+    alert("Contact Us Form Submit Successfully.");
+  };
+
   return (
     <section id="Contact-Me">
       <Navbar></Navbar>
@@ -33,21 +50,49 @@ const ContactMe = () => {
             <div className="col-lg-2 col-md-12"></div>
             <div className="col-lg-8 col-md-12">
               <div className="message-form-body">
-                <form action="">
-                  <div class="form-group">
-                    <input type="text" class="form-control form-control-lg" name="name" id="name" placeholder="Your Name" required />
+                <form onSubmit={handleSubmit(onSubmit)} action="">
+                  <div className="input-group mb-2">
+                    <input
+                      class="form-control form-control-lg"
+                      type="text"
+                      name="name"
+                      //defaultValue={test}
+                      placeholder="Your Name"
+                      {...register("name", { required: true })}
+                    />
+                    {errors.name && <p className="error">Name is required</p>}
                   </div>
-                  <div class="form-group">
-                    <input type="email" class="form-control form-control-lg" name="email" id="" placeholder="name@example.com" required />
+
+                  <div className="input-group mb-2">
+                    <input
+                      class="form-control form-control-lg"
+                      type="email"
+                      name="email"
+                      //defaultValue={test}
+                      placeholder="name@example.com"
+                      {...register("email", { required: true })}
+                    />
+                    {errors.email && <p className="error">Email is required</p>}
                   </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control form-control-lg" name="" id="" placeholder="Phone Number" />
+
+                  <div className="input-group mb-2">
+                    <input
+                      class="form-control form-control-lg"
+                      type="text"
+                      name="phoneNumber"
+                      //defaultValue={test}
+                      placeholder="Phone Number"
+                      {...register("phoneNumber", { required: true })}
+                    />
+                    {errors.phoneNumber && <p className="error">Phone Number is required</p>}
                   </div>
+
+  
                   <div class="form-group">
-                    <textarea class="form-control form-control-lg" id="" rows="4" placeholder="Message">
-                      
-                    </textarea>
+                    <textarea class="form-control form-control-lg" name="message" rows="4" placeholder="Message"  {...register("message", { required: true })}></textarea>
+                    {errors.message && <p className="error">Message is required</p>}
                   </div>
+
                   <div class="form-group ">
                     <input className="btn btn-success btn-lg btn-block " type="submit" value="Send Message" />
                   </div>

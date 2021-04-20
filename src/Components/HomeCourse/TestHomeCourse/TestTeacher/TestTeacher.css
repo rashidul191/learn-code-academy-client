@@ -1,6 +1,10 @@
-.teacher-img{
-    
+.teacher-img{    
     height: 220px;
     width: 220px;
     border-radius: 50%;
+}
+
+.teacher-bg{
+    background: rgb(199, 245, 247);
+    clip-path: polygon(25% 0, 75% 0, 100% 26%, 100% 100%, 0 100%, 0 20%);
 }

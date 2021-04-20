@@ -3,15 +3,14 @@ import "./TestTeacher.css";
 
 const TestTeacher = () => {
   return (
-    <section id="test-Teacher">
+    <section id="test-Teacher" className="teacher-bg">
       <div className="container  py-5">
         <h3 className="text-primary text-center pb-4">***Our Expert Teacher***</h3>
         <div className="row">
           <div className="col-lg-4 col-md-4">
-            <div className="row ">
-            
+            <div className="row ">            
               <div className="ml-auto">
-                <img className="img-fluid teacher-img" src="http://www.studywithanis.com/wp-content/uploads/2018/01/Anis.jpg" alt="" />
+                <img className="img-fluid teacher-img d-none d-md-block" src="http://www.studywithanis.com/wp-content/uploads/2018/01/Anis.jpg" alt="" />
               </div>
             </div>
           </div>
