@@ -31,6 +31,7 @@ import AddCourses from "./Components/Teacher/AddCourses/AddCourses";
 import CourseDetails from "./Components/CourseDetails/CourseDetails";
 import TestCourse from "./Components/HomeCourse/TestHomeCourse/TestCourse/TestCourse";
 import TestCourseDetails from "./Components/HomeCourse/TestHomeCourse/TestCourse/TestCourseDetails/TestCourseDetails";
+import Lesson from "./Components/Lesson/Lesson";
 
 export const UserContext = createContext();
 function App() {
@@ -82,7 +83,7 @@ function App() {
 
           {/* private route start here */}
 
-           <PrivateRoute path="/check-out">
+          <PrivateRoute path="/check-out">
             <CheckOut></CheckOut>
           </PrivateRoute>
 
@@ -104,10 +105,13 @@ function App() {
 
           <PrivateRoute path="/user-notifications">
             <UserNotification></UserNotification>
-          </PrivateRoute> 
+          </PrivateRoute>
 
+          <Route path="/lesson">
+            <Lesson></Lesson>
+          </Route>
           {/* private route start here */}
-          
+
           {/* <Route path="/check-out">
             <CheckOut></CheckOut>
           </Route>

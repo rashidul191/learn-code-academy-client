@@ -1,0 +1,16 @@
+.scrollbar
+{
+    padding-top: 10px;
+	margin-left: 30px;
+	float: left;
+	height: 425px;
+	width: auto;
+	background: #F5F5F5;
+	overflow-y: scroll;
+	margin-bottom: 25px;
+}
+
+.force-overflow
+{
+	min-height: 450px;
+}

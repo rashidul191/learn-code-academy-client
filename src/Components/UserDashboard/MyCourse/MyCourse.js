@@ -96,15 +96,17 @@ const MyCourse = () => {
               </p>
               <hr />
               <div className="row">
-                {/* <Link to="/lesson" className="">
+                 <Link to="/lesson" className="">
                   <button className="btn btn-success mr-3">Go To Lesson</button>
                 </Link>
-                <Link to="/course-review" className="">
+
+                {/* <Link to="/course-review" className="">
                   <button className="btn btn-success ml-3 ">Go To Review</button>
-                </Link> */}
-                 <a target="_blank" href="https://www.youtube.com/playlist?list=PLgH5QX0i9K3oHBr5dsumGwjUxByN5Lnw3" className="">
+                </Link>  */}
+                
+                 {/* <a target="_blank" href="https://www.youtube.com/playlist?list=PLgH5QX0i9K3oHBr5dsumGwjUxByN5Lnw3" className="">
                   <button className="btn btn-success mr-3">Go To Lesson</button>
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
