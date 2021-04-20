@@ -10,8 +10,7 @@ const TestCourseDetails = () => {
     <section>
       <Navbar></Navbar>
       <div className="container">
-        <p className="lead pt-3">Home / Course / Course Details</p>
-        <hr />
+        <p className="lead pt-3">Home / Course / Course Details</p>        
       </div>
       <div className="container">
         <div className="row">

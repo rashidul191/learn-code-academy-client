@@ -13,8 +13,7 @@ const TestCourse = () => {
     <section id="test-Course">
       <Navbar></Navbar>
       <div className="container">
-        <p className="lead pt-3">Home / Course</p>
-        <hr />
+        <p className="lead pt-3">Home / Course</p>        
       </div>
       <div>
         <h3 className="text-center text-light bg-info display-4 mt-3 py-5">Course</h3>
