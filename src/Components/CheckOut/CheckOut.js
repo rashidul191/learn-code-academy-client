@@ -29,19 +29,18 @@ const CheckOut = (props) => {
   const onSubmit = (data) => {
     console.log("form submit done", data);
 
-    fetch('https://vast-atoll-65684.herokuapp.com/paymentMethod',{
-      method:'POST',
-      headers:{'content-type':'application/json'},
-      body: JSON.stringify(data)
+    fetch("https://vast-atoll-65684.herokuapp.com/paymentMethod", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(data),
     })
-    .then(res => res.json())
-    .then(success => {
-      if(success){
-        history.push ("/purchase-history");
-        alert("Your Purchase Check Out Successfully.");
-      }
-    })
-    
+      .then((res) => res.json())
+      .then((success) => {
+        if (success) {
+          history.push("/purchase-history");
+          alert("Your Purchase Check Out Successfully.");
+        }
+      });
   };
 
   return (
@@ -82,18 +81,17 @@ const CheckOut = (props) => {
               <div className="row">
                 <div className="col-lg-6">
                   <div className="form-body mx-5">
-                  <div className="input-group mb-2">                      
+                    <div className="input-group mb-2">
                       <input
                         class="form-control form-control-lg"
-                        type="date"
+                        type="text"
                         name="date"
-                        defaultValue={new Date()}
-                        // placeholder={new Date()}
+                        value={new Date()}
                         {...register("date", { required: true })}
                       />
                       {errors.date && <p className="error">Date is required</p>}
                     </div>
-                    <div className="input-group mb-2">                      
+                    <div className="input-group mb-2">
                       <input
                         class="form-control form-control-lg"
                         type="text"
