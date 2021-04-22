@@ -196,7 +196,7 @@ const CheckOut = (props) => {
                     <div className="row px-5">
                       <h5>Total:</h5>
                       {/* <h5 className="ml-auto">$ {total}</h5> */}
-                      <h5 className="ml-auto">$ 199</h5>
+                      <h5 className="ml-auto">৳ 199</h5>
                     </div>
                     <hr />
                   </div>
