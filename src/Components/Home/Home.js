@@ -15,7 +15,7 @@ const Home = () => {
     document.title = "Learn Code Academy";
     
     return (
-        <section id="home">
+        <section id="home" className="bg-light">
             <Navbar></Navbar>
             <Header></Header>
             <TestHomeCourse></TestHomeCourse>
