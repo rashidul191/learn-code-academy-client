@@ -11,11 +11,11 @@ const EnrollStudents = () => {
                         <p className="lead">EXPERT INSTUCTORS</p>
                     </div>
                     <div className="col-lg-3 col-md-6">
-                        <h1>999</h1>
+                        <h1>9999</h1>
                         <p className="lead">STUDENTS</p>
                     </div>
                     <div className="col-lg-3 col-md-6">
-                        <h1>999</h1>
+                        <h1>9999</h1>
                         <p className="lead">TOTAL ENROLLED</p>
                     </div>
                     <div className="col-lg-3 col-md-6">
