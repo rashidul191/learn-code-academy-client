@@ -22,8 +22,6 @@ const CourseDetails = () => {
         {/* <h1>{courseID} CourseDetails comming soon......</h1> */}
         <AllCourses showCourseCart={false} course={course}></AllCourses>
       </div>
-      
-      
       <Footer></Footer>
     </section>
   );

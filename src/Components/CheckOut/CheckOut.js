@@ -27,7 +27,7 @@ const CheckOut = (props) => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log("form submit done", data);
+    // console.log("form submit done", data);
 
     fetch("https://vast-atoll-65684.herokuapp.com/paymentMethod", {
       method: "POST",
@@ -87,6 +87,7 @@ const CheckOut = (props) => {
                         type="text"
                         name="date"
                         value={new Date()}
+                        default                        
                         {...register("date", { required: true })}
                       />
                       {errors.date && <p className="error">Date is required</p>}

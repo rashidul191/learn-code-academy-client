@@ -175,7 +175,7 @@ const TestCourseDetails = () => {
                 <h6 className="text-success">Web Developer</h6>
                 <div className="row ml-4">
                   {/* socail icon here */}
-                  <p>F Y T I</p>
+                  {/* <p>F Y T I</p> */}
                 </div>
               </div>
             </div>

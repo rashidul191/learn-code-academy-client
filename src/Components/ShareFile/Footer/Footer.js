@@ -15,14 +15,13 @@ const Footer = () => {
           <div className="row">
             <div className="col-lg-4 col-md-6 col-sm-6 pb-3">
               <Link to="/">
-                {" "}
                 <img className="footer-logo-size img-fluid" src={logo} alt="" />
               </Link>
               <div className="pt-4">
                 <p>
-                  
                   <FontAwesomeIcon className="socail-icon" icon={faEnvelopeSquare}></FontAwesomeIcon> Official: lca@gmail.com <br />
-                  <FontAwesomeIcon className="socail-icon" icon={faPhoneSquareAlt}></FontAwesomeIcon> Helpline: 0123456789 <br /> (Available: 09:00am to 11:00pm)
+                  <FontAwesomeIcon className="socail-icon" icon={faPhoneSquareAlt}></FontAwesomeIcon> Helpline: 0123456789 <br /> (Available: 09:00am
+                  to 11:00pm)
                 </p>
               </div>
               <div>

@@ -4,6 +4,7 @@ import './NoMatch.css';
 
 
 const NoMatch = () => {
+    document.title = "LCA | 404 Error";
     return (
         <div className="text-center pt-5">
             <h1 className="display-4 pt-5">404 Error</h1>
