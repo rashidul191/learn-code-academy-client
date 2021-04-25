@@ -51,7 +51,7 @@ const ContactMe = () => {
             <div className="col-lg-8 col-md-12">
               <div className="message-form-body">
                 <form onSubmit={handleSubmit(onSubmit)} action="">
-                  <div className="input-group mb-2">
+                  <div className="mb-2">
                     <input
                       class="form-control form-control-lg"
                       type="text"
@@ -59,11 +59,11 @@ const ContactMe = () => {
                       //defaultValue={test}
                       placeholder="Your Name"
                       {...register("name", { required: true })}
-                    />
-                    {errors.name && <p className="error">Name is required</p>}
+                    />                   
+                    {errors.name && <span className="error">Name is required</span>}
                   </div>
 
-                  <div className="input-group mb-2">
+                  <div className="mb-2">
                     <input
                       class="form-control form-control-lg"
                       type="email"
@@ -72,10 +72,10 @@ const ContactMe = () => {
                       placeholder="name@example.com"
                       {...register("email", { required: true })}
                     />
-                    {errors.email && <p className="error">Email is required</p>}
+                    {errors.email && <span className="error">Email is required</span>}
                   </div>
 
-                  <div className="input-group mb-2">
+                  <div className="mb-2">
                     <input
                       class="form-control form-control-lg"
                       type="text"
@@ -84,15 +84,14 @@ const ContactMe = () => {
                       placeholder="Phone Number"
                       {...register("phoneNumber", { required: true })}
                     />
-                    {errors.phoneNumber && <p className="error">Phone Number is required</p>}
+                    {errors.phoneNumber && <span className="error">Phone Number is required</span>}
                   </div>
 
   
                   <div class="form-group">
                     <textarea class="form-control form-control-lg" name="message" rows="4" placeholder="Message"  {...register("message", { required: true })}></textarea>
-                    {errors.message && <p className="error">Message is required</p>}
+                    {errors.message && <span className="error">Message is required</span>}
                   </div>
-
                   <div class="form-group ">
                     <input className="btn btn-success btn-lg btn-block " type="submit" value="Send Message" />
                   </div>

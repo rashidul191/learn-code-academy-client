@@ -81,7 +81,7 @@ const CheckOut = (props) => {
               <div className="row">
                 <div className="col-lg-6">
                   <div className="form-body mx-5">
-                    <div className="input-group mb-2">
+                    <div className="mb-2">
                       <input
                         class="form-control form-control-lg"
                         type="text"
@@ -90,9 +90,9 @@ const CheckOut = (props) => {
                         default                        
                         {...register("date", { required: true })}
                       />
-                      {errors.date && <p className="error">Date is required</p>}
+                      {errors.date && <span className="error">Date is required</span>}
                     </div>
-                    <div className="input-group mb-2">
+                    <div className="mb-2">
                       <input
                         class="form-control form-control-lg"
                         type="text"
@@ -101,10 +101,10 @@ const CheckOut = (props) => {
                         placeholder="Full Name *"
                         {...register("name", { required: true })}
                       />
-                      {errors.name && <p className="error">Full Name is required</p>}
+                      {errors.name && <span className="error">Full Name is required</span>}
                     </div>
 
-                    <div className="input-group mb-2">
+                    <div className="mb-2">
                       <input
                         class="form-control form-control-lg"
                         type="email"
@@ -113,10 +113,10 @@ const CheckOut = (props) => {
                         placeholder="Email *"
                         {...register("email", { required: true })}
                       />
-                      {errors.email && <p className="error">Email is required</p>}
+                      {errors.email && <span className="error">Email is required</span>}
                     </div>
 
-                    <div className="input-group mb-2">
+                    <div className="mb-2">
                       <input
                         class="form-control form-control-lg"
                         type="text"
@@ -125,12 +125,12 @@ const CheckOut = (props) => {
                         placeholder="Address *"
                         {...register("address", { required: true })}
                       />
-                      {errors.address && <p className="error">Address is required</p>}
+                      {errors.address && <span className="error">Address is required</span>}
                     </div>
 
                     <div className="row">
                       <div className="col-lg-6 col-md-12">
-                        <div className="input-group mb-2">
+                        <div className="mb-2">
                           <input
                             class="form-control form-control-lg"
                             type="text"
@@ -139,11 +139,11 @@ const CheckOut = (props) => {
                             placeholder="Zip Code *"
                             {...register("zipCode", { required: true })}
                           />
-                          {errors.zipCode && <p className="error">Zip Code is required</p>}
+                          {errors.zipCode && <span className="error">Zip Code is required</span>}
                         </div>
                       </div>
                       <div className="col-lg-6 col-md-12">
-                        <div className="input-group mb-2">
+                        <div className="mb-2">
                           <input
                             class="form-control form-control-lg"
                             type="text"
@@ -152,13 +152,11 @@ const CheckOut = (props) => {
                             placeholder="Phone Number *"
                             {...register("phoneNumber", { required: true })}
                           />
-                          {errors.phoneNumber && <p className="error">Phone Number is required</p>}
+                          {errors.phoneNumber && <span className="error">Phone Number is required</span>}
                         </div>
                       </div>
-                    </div>
-
-                    <div class="input-group mb-3">
-                      <div className="input-group mb-2">
+                    </div>                   
+                      <div className="mb-2">
                         <input
                           class="form-control form-control-lg"
                           type="text"
@@ -166,7 +164,7 @@ const CheckOut = (props) => {
                           placeholder="Payment Metoh *"
                           {...register("paymentMetoh", { required: true })}
                         />
-                        {errors.paymentMetoh && <p className="error">Payment Metoh is required</p>}
+                        {errors.paymentMetoh && <span className="error">Payment Metoh is required</span>}
                       </div>
                       {/* <div class="input-group-prepend">
                         <label class="input-group-text" for="inputGroupSelect01">
@@ -178,8 +176,7 @@ const CheckOut = (props) => {
                         <option value="1">bKash</option>
                         <option value="2">Rocket</option>
                         <option value="3">Nagad</option>
-                      </select> */}
-                    </div>
+                      </select> */}                    
                   </div>
                 </div>
 
@@ -238,9 +235,9 @@ const CheckOut = (props) => {
                               <p className="lead">Number is: 0123456789</p>
                               <hr />
                             </div>
-                            <div class="input-group mb-2">
+                            <div class="mb-2">
                               {/* <input type="text" class="form-control" placeholder="bKash Number" aria-label="Dollar amount " /> */}
-                              <div className="input-group mb-2">
+                              <div className="mb-2">
                                 <input
                                   class="form-control form-control-lg"
                                   type="text"
@@ -248,12 +245,11 @@ const CheckOut = (props) => {
                                   placeholder="bKash Number*"
                                   {...register("bkashNumber", { required: true })}
                                 />
-                                {errors.bkashNumber && <p className="error">bKash Number is required</p>}
+                                {errors.bkashNumber && <span className="error">bKash Number is required</span>}
                               </div>
-                            </div>
-                            <div class="input-group">
+                            </div>                          
                               {/* <input type="text" class="form-control" placeholder="bKash Transaction ID" aria-label="Dollar amount " /> */}
-                              <div className="input-group mb-2">
+                              <div className="mb-2">
                                 <input
                                   class="form-control form-control-lg"
                                   type="text"
@@ -261,9 +257,8 @@ const CheckOut = (props) => {
                                   placeholder="bKash Transaction ID *"
                                   {...register("bkashTrID", { required: true })}
                                 />
-                                {errors.bkashTrID && <p className="error">bKash Transaction ID is required</p>}
-                              </div>
-                            </div>
+                                {errors.bkashTrID && <span className="error">bKash Transaction ID is required</span>}
+                              </div>                          
                           </div>
                         </div>
                       </div>
@@ -293,7 +288,7 @@ const CheckOut = (props) => {
                               <p className="lead mb-0">Number is: 0123456789</p>
                               <hr />
                             </div>
-                            <div class="input-group mb-2">
+                            <div class="mb-2">
                               <input type="text" class="form-control" placeholder="Rocket Number" aria-label="Dollar amount " />
                             </div>
                             <div class="input-group">
@@ -328,7 +323,7 @@ const CheckOut = (props) => {
                               <p className="lead">Number is: 0123456789</p>
                               <hr />
                             </div>
-                            <div class="input-group mb-2">
+                            <div class="mb-2">
                               <input type="text" class="form-control" placeholder="Nagad Number" aria-label="Dollar amount " />
                             </div>
                             <div class="input-group">
