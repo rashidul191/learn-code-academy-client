@@ -18,6 +18,20 @@ const CheckOut = (props) => {
   // }
   // cart add program end
 
+  // date show start
+  const d = new Date();
+  const date = d.getDate();
+  const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const month = monthNames[d.getMonth()];
+  const year = d.getFullYear();
+  const hour = d.getHours();
+  const minutes = d.getMinutes();
+  const seconds = d.getSeconds();
+  const dayName = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const days = dayName[d.getDay()];
+  const finalResult = date + "-" + month + "-" + year + " " + days + " " + hour + ":" + minutes + ":" + seconds;
+  // date show end
+
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const history = useHistory();
   const {
@@ -86,8 +100,8 @@ const CheckOut = (props) => {
                         class="form-control form-control-lg"
                         type="text"
                         name="date"
-                        value={new Date()}
-                        default                        
+                        value={finalResult}
+                        default
                         {...register("date", { required: true })}
                       />
                       {errors.date && <span className="error">Date is required</span>}
@@ -155,28 +169,28 @@ const CheckOut = (props) => {
                           {errors.phoneNumber && <span className="error">Phone Number is required</span>}
                         </div>
                       </div>
-                    </div>                   
-                      <div className="mb-2">
-                        <input
-                          class="form-control form-control-lg"
-                          type="text"
-                          name="paymentMetoh"
-                          placeholder="Payment Metoh *"
-                          {...register("paymentMetoh", { required: true })}
-                        />
-                        {errors.paymentMetoh && <span className="error">Payment Metoh is required</span>}
-                      </div>
-                      {/* <div class="input-group-prepend">
+                    </div>
+                    <div className="mb-2">
+                      <input
+                        class="form-control form-control-lg"
+                        type="text"
+                        name="paymentMetoh"
+                        placeholder="Payment Metoh *"
+                        {...register("paymentMetoh", { required: true })}
+                      />
+                      {errors.paymentMetoh && <span className="error">Payment Metoh is required</span>}
+                    </div>
+                    {/* <div class="input-group-prepend">
                         <label class="input-group-text" for="inputGroupSelect01">
                           Payment Method *
                         </label>
                       </div> */}
-                      {/* <select class="custom-select " id="inputGroupSelect01">
+                    {/* <select class="custom-select " id="inputGroupSelect01">
                         <option selected>Choose Option</option>
                         <option value="1">bKash</option>
                         <option value="2">Rocket</option>
                         <option value="3">Nagad</option>
-                      </select> */}                    
+                      </select> */}
                   </div>
                 </div>
 
@@ -247,18 +261,18 @@ const CheckOut = (props) => {
                                 />
                                 {errors.bkashNumber && <span className="error">bKash Number is required</span>}
                               </div>
-                            </div>                          
-                              {/* <input type="text" class="form-control" placeholder="bKash Transaction ID" aria-label="Dollar amount " /> */}
-                              <div className="mb-2">
-                                <input
-                                  class="form-control form-control-lg"
-                                  type="text"
-                                  name="bkashTrID"
-                                  placeholder="bKash Transaction ID *"
-                                  {...register("bkashTrID", { required: true })}
-                                />
-                                {errors.bkashTrID && <span className="error">bKash Transaction ID is required</span>}
-                              </div>                          
+                            </div>
+                            {/* <input type="text" class="form-control" placeholder="bKash Transaction ID" aria-label="Dollar amount " /> */}
+                            <div className="mb-2">
+                              <input
+                                class="form-control form-control-lg"
+                                type="text"
+                                name="bkashTrID"
+                                placeholder="bKash Transaction ID *"
+                                {...register("bkashTrID", { required: true })}
+                              />
+                              {errors.bkashTrID && <span className="error">bKash Transaction ID is required</span>}
+                            </div>
                           </div>
                         </div>
                       </div>
